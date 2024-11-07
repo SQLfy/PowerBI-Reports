@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Mill Levy Dataset"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e59503c3-922c-4954-b765-b76aa2eb23d4"
+  }
+}

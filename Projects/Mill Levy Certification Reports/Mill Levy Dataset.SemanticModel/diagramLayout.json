@@ -1,0 +1,390 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 280.81040246951034,
+        "y": 210.03704900158496
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 243,
+            "y": 671.025
+          },
+          "nodeIndex": "City",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 243,
+            "y": 28.125
+          },
+          "nodeIndex": "County",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 626.962487728887,
+            "y": 596.50732950259817
+          },
+          "nodeIndex": "FundType_Position",
+          "nodeLineageTag": "9fad7bc7-ef2b-4dc4-84c3-996a621d8d30",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 683.10621932221773,
+            "y": 1094.5794898059742
+          },
+          "nodeIndex": "NON 32",
+          "nodeLineageTag": "5d334e33-7819-497a-a10c-e13fb5cdb373",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 1155.425
+          },
+          "nodeIndex": "Schools",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 600.9823295025983,
+            "y": 90.789560836292935
+          },
+          "nodeIndex": "StateReportTab",
+          "nodeLineageTag": "ee7b8f15-1eb8-49d8-bf9e-9ef41875c827",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 1631.6678160919541,
+            "y": 564.5790229885057
+          },
+          "nodeIndex": "StateReportTabSection",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 1160.3942528735633,
+            "y": 135.27327586206894
+          },
+          "nodeIndex": "Title 32",
+          "size": {
+            "height": 1000,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 1763.5,
+            "y": 28.125
+          },
+          "nodeIndex": "Title 32 Totals",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 2758.6612057529255,
+            "y": 1257.7387697048489
+          },
+          "nodeIndex": "Tax Authority Info",
+          "nodeLineageTag": "e307e9a1-fc47-4dfa-a31f-14de0dcddf86",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1652.2023733943324,
+            "y": 1626.2499658556833
+          },
+          "nodeIndex": "ENCOMPASS TLKPTAXAUTHORITYDETAIL",
+          "nodeLineageTag": "b3816e4d-d4e3-4c43-9267-eebf43b63073",
+          "size": {
+            "height": 246.73895110252056,
+            "width": 384.70472191406543
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 1665.8175723284985,
+            "y": 893.10323237223815
+          },
+          "nodeIndex": "Schools (3)",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1671.4476814703353,
+            "y": 1294.9054036485475
+          },
+          "nodeIndex": "City (3)",
+          "size": {
+            "height": 145,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2032.9320840803393,
+            "y": 895.97302506149754
+          },
+          "nodeIndex": "County (3)",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2058.6507420469925,
+            "y": 1292.0044161792962
+          },
+          "nodeIndex": "Non Title 32 (3)",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2385.6976323858835,
+            "y": 884.49385430445989
+          },
+          "nodeIndex": "Title 32 (3)",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3326.6612057529255,
+            "y": 799.43515590202446
+          },
+          "nodeIndex": "County (2)",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3610.6612057529255,
+            "y": 799.43515590202446
+          },
+          "nodeIndex": "Non Title 32 (2)",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4178.6612057529255,
+            "y": 799.43515590202446
+          },
+          "nodeIndex": "Title 32 (2)",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3894.6612057529255,
+            "y": 799.43515590202446
+          },
+          "nodeIndex": "Schools (2)",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3042.6612057529255,
+            "y": 799.43515590202446
+          },
+          "nodeIndex": "City (2)",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 4462.6612057529255,
+            "y": 891.18515590202446
+          },
+          "nodeIndex": "Parameters",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2124.117719964137,
+            "y": 1663.3591913600108
+          },
+          "nodeIndex": "Realware GRASSASSESSED",
+          "size": {
+            "height": 232.38612044403817,
+            "width": 491.32574966279253
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "Azure Mill Levy App GROSSASSESSED",
+          "nodeLineageTag": "d1f5fb67-d929-4f70-b1b2-9043c8c760a0",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {},
+          "nodeIndex": "Millap GROSSASSESSED",
+          "nodeLineageTag": "3de961b6-6ec9-421e-8be7-34e1b4f68f63",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 43.801796129456072,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 1,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 140,
+            "y": 70
+          },
+          "nodeIndex": "Schools (3)",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "City",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    },
+    {
+      "ordinal": 2,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 684,
+            "y": 305
+          },
+          "nodeIndex": "ENCOMPASS TLKPTAXAUTHORITYDETAIL",
+          "nodeLineageTag": "b3816e4d-d4e3-4c43-9267-eebf43b63073",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 285,
+            "y": 92
+          },
+          "nodeIndex": "Realware GRASSASSESSED",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Layout 1Realware",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Layout 1Realware",
+  "defaultDiagram": "All tables"
+}

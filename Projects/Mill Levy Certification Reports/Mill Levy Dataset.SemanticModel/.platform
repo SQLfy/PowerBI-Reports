@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Mill Levy Dataset"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d70236aa-ee56-4ec4-b409-a4f434164b00"
+  }
+}
