@@ -1,0 +1,4825 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.131.901.0 (24.07)"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"ForeclosureDetail_Order\",\"ForeclosureSearch\",\"ForeclosureDetail\",\"Foreclosure Location\",\"detailLink\",\"Lienor Address\",\"Grantor Address\",\"IntradayForeclosureSearch\",\"Peace Officer\",\"Redemption\",\"Addresses\",\"Datalake\",\"Datalake (2)\",\"Redemption Links\",\"Foreclosure Links\",\"Landmark DocumentId\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Entities": {
+              "foreclosure_search.accepted_bid_final_sale_amount": {
+                "Binding": {
+                  "ConceptualEntity": "ForeclosureSearch",
+                  "ConceptualProperty": "Accepted Bid Final Sale Amount"
+                },
+                "State": "Generated"
+              },
+              "foreclosure_search.bid_total_due": {
+                "Binding": {
+                  "ConceptualEntity": "ForeclosureSearch",
+                  "ConceptualProperty": "Bid Total Due"
+                },
+                "State": "Generated"
+              },
+              "foreclosure_search.foreclosure_status": {
+                "Binding": {
+                  "ConceptualEntity": "ForeclosureSearch",
+                  "ConceptualProperty": "Foreclosure Status"
+                },
+                "State": "Generated"
+              },
+              "foreclosure_search.original_note_amount": {
+                "Binding": {
+                  "ConceptualEntity": "ForeclosureSearch",
+                  "ConceptualProperty": "Original Note Amount"
+                },
+                "State": "Generated"
+              },
+              "foreclosure_search.original_scheduled_sale_date": {
+                "Binding": {
+                  "ConceptualEntity": "ForeclosureSearch",
+                  "ConceptualProperty": "Original Scheduled Sale Date"
+                },
+                "State": "Generated"
+              },
+              "foreclosure_search.property_address": {
+                "Binding": {
+                  "ConceptualEntity": "ForeclosureSearch",
+                  "ConceptualProperty": "Property Address"
+                },
+                "State": "Generated"
+              },
+              "foreclosure_search.property_address_full": {
+                "Binding": {
+                  "ConceptualEntity": "ForeclosureSearch",
+                  "ConceptualProperty": "Property Address Full"
+                },
+                "State": "Generated"
+              },
+              "foreclosure_search.property_city": {
+                "Binding": {
+                  "ConceptualEntity": "ForeclosureSearch",
+                  "ConceptualProperty": "Property City"
+                },
+                "State": "Generated"
+              },
+              "foreclosure_search.property_zip": {
+                "Binding": {
+                  "ConceptualEntity": "ForeclosureSearch",
+                  "ConceptualProperty": "Property Zip"
+                },
+                "State": "Generated"
+              }
+            },
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "detailLink",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "expression": "\"https://pubreports.douglas.co.us/Home/Index/ForeclosureDetail/\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "dccb2513-6b25-4427-b795-81569cd134c9"
+      },
+      {
+        "name": "Datalake",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "expression": "\"https://dldwprwestus3.blob.core.windows.net/datalake\" meta [IsParameterQuery=true, List={\"https://dldwprwestus3.blob.core.windows.net/datalake\"}, DefaultValue=\"https://dldwprwestus3.blob.core.windows.net/datalake\", Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "771d3519-ec37-42aa-8f49-dc3a6bc20ae1"
+      },
+      {
+        "name": "Datalake (2)",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "expression": "\"https://dldwprwestus3.blob.core.windows.net/datalake\" meta [IsParameterQuery=true, List={\"https://dldwprwestus3.blob.core.windows.net/datalake\"}, DefaultValue=\"https://dldwprwestus3.blob.core.windows.net/datalake\", Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "2fea5ca9-f663-4473-b724-e507249e58a0"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "4cc4aac8-01bf-4e54-9f71-879f1f4dfb8f",
+        "fromColumn": "PKId",
+        "fromTable": "ForeclosureDetail",
+        "toColumn": "PKId",
+        "toTable": "ForeclosureSearch"
+      },
+      {
+        "name": "2db9b965-30b1-488e-b908-b7e3833dd1ad",
+        "crossFilteringBehavior": "bothDirections",
+        "fromColumn": "PKId",
+        "fromTable": "SlicerTable",
+        "toColumn": "PKId",
+        "toTable": "ForeclosureSearch"
+      },
+      {
+        "name": "5bf6e879-2e6c-48fd-9aae-e4767164fa84",
+        "fromColumn": "File ID",
+        "fromTable": "Lienor Address",
+        "toColumn": "PKId",
+        "toTable": "ForeclosureSearch"
+      },
+      {
+        "name": "92b2fbd0-fa92-43d1-97ab-29be8ed151c4",
+        "fromColumn": "File ID",
+        "fromTable": "Grantor Address",
+        "toColumn": "PKId",
+        "toTable": "ForeclosureSearch"
+      },
+      {
+        "name": "9580441f-c266-4794-8c08-76a2f2e27321",
+        "fromColumn": "PKId",
+        "fromTable": "Redemption",
+        "toColumn": "PKId",
+        "toTable": "ForeclosureSearch"
+      },
+      {
+        "name": "561f559c-5081-42bd-af53-b71e8666d244",
+        "fromColumn": "File ID",
+        "fromTable": "Addresses",
+        "toColumn": "PKId",
+        "toTable": "ForeclosureSearch"
+      },
+      {
+        "name": "da33f026-addd-469a-b101-8f9c7c449d14",
+        "fromColumn": "PKId",
+        "fromTable": "Redemption Links",
+        "toColumn": "PKId",
+        "toTable": "ForeclosureSearch"
+      },
+      {
+        "name": "1c753b52-43d1-41cc-863e-43a19ad5ad5f",
+        "fromColumn": "PKId",
+        "fromTable": "Foreclosure Links",
+        "toColumn": "PKId",
+        "toTable": "ForeclosureSearch"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "SlicerTable",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "7b6f30fb376a4b348320102677595926"
+          }
+        ],
+        "columns": [
+          {
+            "name": "FilterColumn",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "b9c8858a-05bb-4841-80c9-1ddb0d788b2e",
+            "sourceColumn": "[FilterColumn]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "ParentFilter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "92addcbe-0b13-482f-8b8a-1d57904f9b64",
+            "sourceColumn": "[ParentFilter]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "PKId",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "395144c3-0a93-4f3a-ba18-fd51809925ec",
+            "sourceColumn": "[PKId]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "f118a9df-9517-4d53-8b9b-380a850a3259",
+        "partitions": [
+          {
+            "name": "SlicerTable-bdcb911d-22b5-49ae-8974-1d62091a00f4",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "",
+                "    DISTINCT(",
+                "        UNION(",
+                "            SELECTCOLUMNS('ForeclosureSearch', \"FilterColumn\", 'ForeclosureSearch'[PT], \"ParentFilter\", \"PT #\", \"PKId\", 'ForeclosureSearch'[PKId])",
+                "            ,SELECTCOLUMNS('ForeclosureSearch', \"FilterColumn\", 'ForeclosureSearch'[Attorney File Number], \"ParentFilter\", \"Attorney File #\", \"PKId\", 'ForeclosureSearch'[PKId])",
+                "            ,SELECTCOLUMNS('ForeclosureSearch', \"FilterColumn\", 'ForeclosureSearch'[Original Borrower], \"ParentFilter\", \"Borrower\", \"PKId\", 'ForeclosureSearch'[PKId])",
+                "            ,SELECTCOLUMNS('ForeclosureSearch', \"FilterColumn\", 'ForeclosureSearch'[Property Address], \"ParentFilter\", \"Address\", \"PKId\", 'ForeclosureSearch'[PKId])",
+                "            ,SELECTCOLUMNS('ForeclosureSearch', \"FilterColumn\", 'ForeclosureSearch'[Property City], \"ParentFilter\", \"City\", \"PKId\",  'ForeclosureSearch'[PKId])",
+                "            ,SELECTCOLUMNS('ForeclosureSearch', \"FilterColumn\", 'ForeclosureSearch'[Property Zip], \"ParentFilter\", \"Zip Code\", \"PKId\",  'ForeclosureSearch'[PKId])",
+                "            ,SELECTCOLUMNS('ForeclosureSearch', \"FilterColumn\", 'ForeclosureSearch'[Subdivision], \"ParentFilter\", \"Subdivision\", \"PKId\", 'ForeclosureSearch'[PKId])",
+                "            ,SELECTCOLUMNS('ForeclosureSearch', \"FilterColumn\", 'ForeclosureSearch'[Current Sale Date], \"ParentFilter\", \"Sale Date\", \"PKId\", 'ForeclosureSearch'[PKId])",
+                "        )",
+                "    )"
+              ],
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "ForeclosureDetail_Order",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Column Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "58edbffd-a822-49f2-9e93-8a75e8c280af",
+            "sortByColumn": "Column Order",
+            "sourceColumn": "Column Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Column Order",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "9d9a7f07-bbe4-47d0-a996-606893590440",
+            "sourceColumn": "Column Order",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Heading",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d0f85a38-929f-48ef-a21b-cbbfa3903ac3",
+            "sourceColumn": "Heading",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Heading Order",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "eefef039-73e7-44d8-9740-d81226e6fe10",
+            "sourceColumn": "Heading Order",
+            "summarizeBy": "sum"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "7ee22e3a-53f3-4de2-8e99-a78ec6db1a14",
+        "partitions": [
+          {
+            "name": "ForeclosureDetail_Order-6083752c-7952-4a36-8d26-957936d23459",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"lVjbjuI4EP0Vi+dZiSSEyyOXRtM7PQ0Cdkfa1jyYxN1Ym9jIcbqXv99yOYQQTEJekJLU8akqnyq7eHvrzXOlmNBk9SWY6n3ref0+/K6VPDKlT2TBNOVJhh96v7+99VaKf3BBEzKTSsmvAhM2YmZMsHcecapO5mXowe+LpKJiGVjLucwFrLCmKmIJec3TvSXwmgm2mmp2i/KbQym/TONYsSwjyzxJENfMVseZL4GhWulDmcMrw93pyGCdLFL8qLkUiGgJKd/H/JNnhfWgOZQX9gFbUmMYNDMsGIvJ6p3sVJ5psmERQyR5lbhJ/bubhNEA0HxF0/CuaamWVwkbNE3N9hrI8P7qq1xnmoqYiw8yowkVEQAzw7eckyVP4D2ucJ/0WWgG+wIxgSqM7eg+21RrqQQ7kaVUpKbTkaEoDS7QQR3KE1ZR3bj/GGx9kOIK9yBdRXWTZiqIiUWJzHLFiCmR3IIMT/XTBRci7LtMYvKcZblJno/9oMn83EG2FNKwsCn3+20kTwmLUG5TEcPHFHa8rkHfs6Jnf+DSz+JdqpQW6h6eG0a65wKEDALjoJSfQMJiBIftYOOYUQt4v8gZmZlt9/0HWCvA5ZnQbycsy2EbHVicA/A6a0E7dREnlAParPN9wjPbdvyg3YM7cAxg8Ei6heYiN0WZIaSdccbtxvJPyxK2sxjIUsmUQD8lL0zENrywncwkkmxBv8Yem8xaZtoFGBUBQW/kUPMGB0lZ5yo60IzdSBHbTctahSC0BHTMWFrR1OgBV34prmEBUkZ/iXz0APs0Mh6DohBvVWaMy6brjx9wYoENkInoRFaKrD6Z2nNM5vgBF87ZQ58nD7CZPKU2zWvFJSQAszW55rpYwevxDfIF3JUKW3q/C65Wv0G/M+slt4HXiRrBIDGpYsvtdecuFWrwfif6JVdwOhZNJ/A7cT+JGI/PoBMjtOkUkm2Rnfhsik0pGeygG+tqc5XlQSfmAn1JcthOjv1nDkeeJcSOZR/rBVCw0cwwlQBsWQ2AX1wfYkW/oLhrHSoYtnBdQ8ucjFoYMSK84VSaOFxwXffdP3MBRXxzMI689k7wk/5XOwr99rNstdtWzz+vj2XUeAvH977L+flqvWHV1ICda7nyDC9vMHWYcxbA+cpo6sba6bMJKyK7Rd164Fp7A5ddqjTx7ro0cJGcYf5dWOhi+1ty+E4c+QpdLFe6u7Yfupaf/TgLBwxcC85+wIiAz6PGoWtuTxMwa1TFP/yIr8euxa5mJGvm1IQg3+2lw+tPnEHBmbyT2sxoudXgpGXbq31n2FyiVVRZ1+GorfXcaubC6Xtea/k5Vzjz+157/W5gSjMAM+kVZe95ztqsWlb+FHDW53n6A3/+EkcKiYerhYj4keJs757UXaVwyYbnOYvUCSrV7TlLFYa1E4y1qhqGszjR8JWmNivOQnyKuS64nJUHmVA0pjjbXuZARuGShiBn+TkvgDBJf1mIi8f1pw3cUcS/CLHD9/mpnJ9uR8agRXK//wc=\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#\"Column Name\" = _t, #\"Column Order\" = _t, Heading = _t, #\"Heading Order\" = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column Name\", type text}, {\"Column Order\", Int64.Type}, {\"Heading Order\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "ForeclosureSearch",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "PKId",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "1fce7eb6-0628-44e6-9832-bb14de4bc143",
+            "sourceColumn": "PKId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "0355cb2f-b128-46f7-8670-a68350674b02",
+            "sourceColumn": "PT",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Current Owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "48bf5169-d0cf-42f1-9778-9df59919fec5",
+            "sourceColumn": "Current Owner",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Original Borrower",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cda2a429-a2e4-4695-9feb-014c55fcfe5b",
+            "sourceColumn": "Original Borrower",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Beneficiary",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e124f7ce-84b0-4881-b501-c193560d4e51",
+            "sourceColumn": "Beneficiary",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "County Parcel Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b936f0b6-5a50-45bb-8eca-b987c1571573",
+            "sourceColumn": "County Parcel Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "State Parcel Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fe7e1c9d-bfe9-43d2-aa36-658f29af578b",
+            "sourceColumn": "State Parcel Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Property Address",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cdf585fc-d1a3-4c9d-b8a9-79ecaa5d561b",
+            "sourceColumn": "Property Address",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subdivision",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "05cbe405-44ba-4561-ab24-1651d7e0358c",
+            "sourceColumn": "Subdivision",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Legal Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6def1401-79d2-4229-99c3-bcd7379637ed",
+            "sourceColumn": "Legal Description",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Deed Of Trust Reception No",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e6a1bcb0-a2ad-44f6-8e4e-628d1996b17f",
+            "sourceColumn": "Deed Of Trust Reception No",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Original Note Amount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              },
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "f04f103e-dd55-4f06-9142-e0698b144ee2",
+            "sourceColumn": "Original Note Amount",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Outstanding Balance As Of FC Filing",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              },
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "8b21418f-88a8-4a61-bae8-3c6ddc1a3ce5",
+            "sourceColumn": "Outstanding Balance As Of FC Filing",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Interest Rate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b63140ff-d543-4214-87cc-6d5bfe72b063",
+            "sourceColumn": "Interest Rate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Attorney For Beneficiary",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b3a2fa4e-0ce5-45fb-b6e8-55dae7662e64",
+            "sourceColumn": "Attorney For Beneficiary",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Attorney File Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "b34efbdd-0a51-4e85-952d-e33d80ca4cf7",
+            "sourceColumn": "Attorney File Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Attorney Phone Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "02326d8f-5016-41d3-8782-aff250b311f9",
+            "sourceColumn": "Attorney Phone Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Attorney Address",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "33085c1a-03a4-4a61-a99c-4ca499083cd0",
+            "sourceColumn": "Attorney Address",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Foreclosure Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4589125c-34fb-4d26-b4f1-1e3943448a7d",
+            "sourceColumn": "Foreclosure Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Hold Issue",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "989dcef4-6de9-4a89-84ad-5aafaaf5c150",
+            "sourceColumn": "Hold Issue",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Election And Demand Reception No",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3f90817f-c407-4309-a0be-2c3aa90b7e4e",
+            "sourceColumn": "Election And Demand Reception No",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Combined Notice Mailed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fc84b5cb-865c-4f99-bd81-440ef0f5bedb",
+            "sourceColumn": "Combined Notice Mailed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cure Intent Due By",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "64cf435f-0708-4685-8787-63848e72a773",
+            "sourceColumn": "Cure Intent Due By",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cure Intent Filed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8d540120-62a7-461d-ab1c-1d946c822eff",
+            "sourceColumn": "Cure Intent Filed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Original Scheduled Sale Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "mm/dd/yyyy",
+            "lineageTag": "7ddd0bc3-8ace-43f4-8501-528b5a40070b",
+            "sourceColumn": "Original Scheduled Sale Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Current Sale Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "mm/dd/yyyy",
+            "lineageTag": "79f7e837-108b-4c16-823c-c653a7c500ed",
+            "sourceColumn": "Current Sale Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bid From the Lender",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              },
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "d058e2a8-3a64-4062-8203-19cc1e0203e2",
+            "sourceColumn": "Bid From the Lender",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Notice Of Sale Published",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "99603fec-0937-4b4a-be12-c651c243e68c",
+            "sourceColumn": "Notice Of Sale Published",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Notice Of Sale Publisher",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4983d2fa-8a0b-4163-9578-6645cd7ea56a",
+            "sourceColumn": "Notice Of Sale Publisher",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Continuances",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8485ebc3-f0fd-4c56-b96b-8b29a221140e",
+            "sourceColumn": "Continuances",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date Sold",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "mm/dd/yyyy",
+            "lineageTag": "81246581-2c4c-4460-b80d-0fd5dbee20d0",
+            "sourceColumn": "Date Sold",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Purchaser",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aa6d6ef6-04b8-464b-b8f0-4d7c27de7b35",
+            "sourceColumn": "Purchaser",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Written Bid From Lender",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              },
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "a5cf6c00-2cbe-4021-9872-bc24fe37b243",
+            "sourceColumn": "Written Bid From Lender",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Accepted Bid Final Sale Amount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              },
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "1097b0ad-9270-4658-9a8c-f75742d58b76",
+            "sourceColumn": "Accepted Bid Final Sale Amount",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Deficiency Or Overbid Raw",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              },
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "7349640d-4fd1-4942-ae89-5e0ac452511f",
+            "sourceColumn": "Deficiency Or Overbid Raw",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Certificate Of Purchase Reception No",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "816d59d7-f31a-4908-a85b-af9236e94103",
+            "sourceColumn": "Certificate Of Purchase Reception No",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Intent to Redeem Due By",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "587215e1-62ff-47c7-837d-1390bf6d62ed",
+            "sourceColumn": "Intent to Redeem Due By",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date Closed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "mm/dd/yyyy",
+            "lineageTag": "123c3e89-1c2b-4bd5-bddd-926b75522b06",
+            "sourceColumn": "Date Closed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Reason Closed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6b793587-4eb8-4c7c-8464-aa630ab500bb",
+            "sourceColumn": "Reason Closed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Withdrawal Reception No",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "a58c0750-69c9-4a2d-92ed-a61191989c34",
+            "sourceColumn": "Withdrawal Reception No",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Withdrawal Recorded",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "978858e7-3337-4804-bdad-a649193bbe9b",
+            "sourceColumn": "Withdrawal Recorded",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Created",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "mm/dd/yyyy",
+            "lineageTag": "89392e71-2cd3-422a-a841-8b2afbbd37a0",
+            "sourceColumn": "Created",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Junior Intent Filed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "f63ef278-aaf9-49b2-8c20-12244e27a561",
+            "sourceColumn": "Junior Intent Filed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Max Sale Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "mm/dd/yyyy",
+            "lineageTag": "9c096ce9-fad9-450e-9505-04ecd25775fe",
+            "sourceColumn": "Max Sale Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NOTSPublisher",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "d6e1a74a-cfc9-4821-8c4c-42c4c1221a5f",
+            "sourceColumn": "NOTSPublisher",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Property Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6cbf18ad-2b3e-49f8-a6c7-217c9e7dbb24",
+            "sourceColumn": "Property Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Public TDReception",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "fa8584eb-7702-4450-a7d4-0d025e5ddafb",
+            "sourceColumn": "Public TDReception",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Public TDRecorded",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "876ab030-069f-4318-8e9b-8c2fafed261d",
+            "sourceColumn": "Public TDRecorded",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Restart 1 Election Reception",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e9a46458-2c47-427d-a880-2b7732e5d283",
+            "sourceColumn": "Restart 1 Election Reception",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Restart 1Election Recorded",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "5cc54080-4b6f-4913-8755-2953ad83ef0e",
+            "sourceColumn": "Restart 1Election Recorded",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rerecording Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "mm/dd/yyyy",
+            "lineageTag": "3f22ee99-6589-45a0-9bf5-97c58899fc40",
+            "sourceColumn": "Rerecording Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Rerecording Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d6fac271-a34c-4a1e-8912-7173fb50e79b",
+            "sourceColumn": "Rerecording Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Original Election Re Recorded",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "e903b4d0-df0a-4c16-83c1-9ea0d27cfacb",
+            "sourceColumn": "Original Election Re Recorded",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Restart 1Election Re Recorded",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "4a9dd66d-336d-420b-89c9-7a829cc96585",
+            "sourceColumn": "Restart 1Election Re Recorded",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BKFiled",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "lineageTag": "252e8cd5-19a1-4530-9f06-d62e53ca9be0",
+            "sourceColumn": "BKFiled",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Property Address Full",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c268974e-1947-4afd-b8f7-7e749e9d4c73",
+            "sourceColumn": "Property Address Full",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Property City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8f10b00b-f633-4ffb-a2e8-f0eb4f7b681b",
+            "sourceColumn": "Property City",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Property Zip",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c084c33a-89ed-455c-85a7-82fea3d4e853",
+            "sourceColumn": "Property Zip",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "On Hold",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2a0fd9d6-0f7b-4ddb-94da-232477c7b69f",
+            "sourceColumn": "On Hold",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bid Total Due",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              },
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "77984e5e-c113-4a6c-934f-fbae61dc06a0",
+            "sourceColumn": "Bid Total Due",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "County Parcel Number Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "lineageTag": "9d700fc7-5f8b-4493-b15b-b6226ae088bf",
+            "sourceColumn": "County Parcel Number Link",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "State Parcel Number Code",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9e47f099-4124-4e3b-8e10-5a8e92e9aac5",
+            "sourceColumn": "State Parcel Number Code",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Foreclosure Location.x",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataCategory": "Longitude",
+            "dataType": "double",
+            "lineageTag": "3da1893f-7451-43a1-aa8f-c7e618f0c6c3",
+            "sourceColumn": "Foreclosure Location.x",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Foreclosure Location.y",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataCategory": "Latitude",
+            "dataType": "double",
+            "lineageTag": "595bb4b9-99f0-4ffc-8e88-ff1dbef692a6",
+            "sourceColumn": "Foreclosure Location.y",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Property Type Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aa38c8aa-f857-4bfb-a09b-0de7d15b0a2b",
+            "sourceColumn": "Property Type Description",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Property Zip 5",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": "Left('ForeclosureSearch'[Property Zip],5)",
+            "isDataTypeInferred": true,
+            "lineageTag": "da209aa6-2087-4fc0-b5bc-ab3210ac89c8",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "PT # Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "lineageTag": "99e5d63f-eb80-4f49-94b8-111e10818f33",
+            "sourceColumn": "PT # Link",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Hold Iss",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "expression": [
+              "SWITCH( true,",
+              "    ForeclosureSearch[Hold Issue] = \"Bankruptcy Filed, Pubs Completed\", \"BK Filed\",",
+              "    ForeclosureSearch[Hold Issue] = \"Bankruptcy Filed, Pubs not Complete\", \"BK Filed Pubs No\",",
+              "    ForeclosureSearch[Hold Issue] = \"Withdrawal Coming\", \" WC\",",
+              "    ForeclosureSearch[Hold Issue] = \"Cure Funds Received\", \"FR\",",
+              "    blank())"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "2e6cc693-9cd4-4de3-af71-87709bc7875a",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Bid Received",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "84e23efb-c347-4615-a924-b8790326958d",
+            "sourceColumn": "Bid Received",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Deficiency Or Overbid",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              },
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "decimal",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "c8f91194-b5a1-41d4-8751-4430d442dc5a",
+            "sourceColumn": "Deficiency Or Overbid",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Edited",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "lineageTag": "3969bc5d-de28-4e16-86e7-404656b329ba",
+            "sourceColumn": "Edited",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Withdrawal Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "expression": [
+              "",
+              "    SWITCH(true",
+              "        ,'ForeclosureSearch'[Withdrawal Reception No] <> BLANK()",
+              "            , CONCATENATE(\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\", 'ForeclosureSearch'[Withdrawal Reception No])",
+              "        , BLANK()",
+              "    )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "dc2a5b53-4785-4bd6-9854-e8cb859a9508",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Deed of Trust Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "expression": [
+              "",
+              "    SWITCH(true",
+              "        ,FIND(\"*\", 'ForeclosureSearch'[Deed Of Trust Reception No],,0)>0, CONCATENATE(\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\", LEFT('ForeclosureSearch'[Deed Of Trust Reception No],FIND(\"*\", 'ForeclosureSearch'[Deed Of Trust Reception No],,0)))",
+              "        ,FIND(\" \", 'ForeclosureSearch'[Deed Of Trust Reception No],,0)>0, CONCATENATE(\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\", LEFT('ForeclosureSearch'[Deed Of Trust Reception No],FIND(\" \", 'ForeclosureSearch'[Deed Of Trust Reception No],,0)))",
+              "        , BLANK()",
+              "    )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "5c4f5eeb-e99b-4f7d-929f-8e10e8645439",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Election and Demand Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "expression": [
+              "",
+              "    SWITCH(true",
+              "        ,FIND(\"*\", 'ForeclosureSearch'[Election And Demand Reception No],,0)>0, CONCATENATE(\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\", LEFT('ForeclosureSearch'[Election And Demand Reception No],FIND(\"*\", 'ForeclosureSearch'[Election And Demand Reception No],,0)))",
+              "        ,FIND(\" \", 'ForeclosureSearch'[Election And Demand Reception No],,0)>0, CONCATENATE(\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\", LEFT('ForeclosureSearch'[Election And Demand Reception No],FIND(\" \", 'ForeclosureSearch'[Election And Demand Reception No],,0)))",
+              "        , BLANK()",
+              "    )",
+              "",
+              "",
+              "",
+              ""
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "b080ec80-8fa0-41d0-a63a-b7fbdcc3e27e",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Restart 1 Election Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "expression": [
+              "",
+              "    SWITCH(true",
+              "        ,'ForeclosureSearch'[Restart 1 Election Reception] <> BLANK()",
+              "            , CONCATENATE(\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\", 'ForeclosureSearch'[Restart 1 Election Reception])",
+              "        , BLANK()",
+              "    )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "57d4d538-241c-4f9c-ae10-5467c66d3980",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Certificate Of Purchase Reception No Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "expression": [
+              "",
+              "    SWITCH(true",
+              "        ,FIND(\"*\", 'ForeclosureSearch'[Certificate Of Purchase Reception No],,0)>0, CONCATENATE(\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\", LEFT('ForeclosureSearch'[Certificate Of Purchase Reception No],FIND(\"*\", 'ForeclosureSearch'[Certificate Of Purchase Reception No],,0)))",
+              "        ,FIND(\" \", 'ForeclosureSearch'[Certificate Of Purchase Reception No],,0)>0, CONCATENATE(\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\", LEFT('ForeclosureSearch'[Certificate Of Purchase Reception No],FIND(\" \", 'ForeclosureSearch'[Certificate Of Purchase Reception No],,0)))",
+              "        , BLANK()",
+              "    )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "963a395e-d9f2-4d8b-ab0a-b363f3269c3f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Public TD Reception Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "expression": [
+              "",
+              "    SWITCH(true",
+              "        ,'ForeclosureSearch'[Public TDReception] <> BLANK()",
+              "            , CONCATENATE(\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\", 'ForeclosureSearch'[Public TDReception])",
+              "        , BLANK()",
+              "    )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "c0952e7c-0662-460a-84a1-eb5efc2cfd15",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "NED Recorded",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "mm/dd/yyyy",
+            "lineageTag": "a563d69d-a29b-42be-adc4-daad8470d785",
+            "sourceColumn": "NED Recorded",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "9f0c712b-3d10-4fa7-87b4-43c57396f3f2",
+        "measures": [
+          {
+            "name": "Bid Due",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "Sum('ForeclosureSearch'[Bid Total Due])",
+            "lineageTag": "ff983665-2260-4c6b-9f0d-b0e1a5f3ac76"
+          },
+          {
+            "name": "Date Last Refreshed",
+            "expression": "Max(ForeclosureSearch[Edited])",
+            "formatString": "General Date",
+            "lineageTag": "2d4a20ca-abce-4184-92c7-46c85c013ae0"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "ForeclosureSearch-6f822251-a86b-4317-b4b6-54bcce0e211a",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = AzureStorage.Blobs(Datalake),",
+                "    #\"v_foreclosure_detail_flat pq\" = Source{[#\"Folder Path\"=\"https://dldwprwestus3.blob.core.windows.net/datalake\",Name=\"consumer/foreclosure/v_foreclosure_detail_flat/v_foreclosure_detail_flat.pq\"]}[Content],",
+                "    #\"Imported Parquet\" = Parquet.Document(#\"v_foreclosure_detail_flat pq\"),",
+                "    #\"Merged AntiJoin\" = Table.NestedJoin(#\"Imported Parquet\", {\"PKId\"}, IntradayForeclosureSearch, {\"PKId\"}, \"IntradayForeclosureSearch\", JoinKind.LeftAnti),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Merged AntiJoin\",{\"IntradayForeclosureSearch\"}),",
+                "    #\"Appended Query\" = Table.Combine({#\"Removed Columns\", IntradayForeclosureSearch}),",
+                "    #\"Camel Cap\" = Table.TransformColumnNames(#\"Appended Query\", each Text.Combine(Splitter.SplitTextByCharacterTransition({\"a\"..\"z\"}, {\"A\"..\"Z\"})(_), \" \" )),",
+                "    #\"Number Cap\" = Table.TransformColumnNames(#\"Camel Cap\", each Text.Combine(Splitter.SplitTextByCharacterTransition({\"a\"..\"z\"}, {\"0\"..\"9\"}) (_), \" \" )),",
+                "    #\"Underscore\" = Table.RenameColumns(#\"Number Cap\", List.Transform(Table.ColumnNames(#\"Number Cap\"), each {_, Text.Replace(_, \"_\", \" \")})),",
+                "    #\"Filtered Rows\" = Table.SelectRows(Underscore, each [PKId] <> 1561),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Filtered Rows\",{{\"PT NO\", \"PT\"}, {\"Date File Received\", \"Created\"}}),",
+                "    #\"Added County Parcel Number Link\" = Table.AddColumn(#\"Renamed Columns\", \"County Parcel Number Link\", each \"https://apps.douglas.co.us/assessor/web/#/details/\" & [County Parcel Number]),",
+                "    #\"Added State Parcel Number Code\" = Table.AddColumn(#\"Added County Parcel Number Link\", \"State Parcel Number Code\", each Text.Replace([State Parcel Number],\"-\",\"\")),",
+                "    #\"Merged Queries\" = Table.NestedJoin(#\"Added State Parcel Number Code\", {\"County Parcel Number\"}, #\"Foreclosure Location\", {\"County Parcel Number\"}, \"Foreclosure Location\", JoinKind.LeftOuter),",
+                "    #\"Expanded Foreclosure Location\" = Table.ExpandTableColumn(#\"Merged Queries\", \"Foreclosure Location\", {\"x\", \"y\"}, {\"Foreclosure Location.x\", \"Foreclosure Location.y\"}),",
+                "    #\"Added Detail Link\" = Table.AddColumn(#\"Expanded Foreclosure Location\", \"Detail Link\", each detailLink & [#\"PT\"]),",
+                "    #\"Added Bid Received\" = Table.AddColumn(#\"Added Detail Link\", \"Bid Received\", each if [Bid From the Lender] <> null then \"Yes\" else \"No\"),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Added Bid Received\",{{\"Detail Link\", \"PT # Link\"}, {\"Deficiency Or Overbid\", \"Deficiency Or Overbid Raw\"}}),",
+                "    #\"Added Deficiency Or Overbid\" = Table.AddColumn(#\"Renamed Columns1\", \"Deficiency Or Overbid\", each if [Accepted Bid Final Sale Amount] = 0.00 or [Accepted Bid Final Sale Amount] = null",
+                " then null else [Deficiency Or Overbid Raw]),",
+                "    #\"Renamed Columns2\" = Table.RenameColumns(#\"Added Deficiency Or Overbid\",{{\"Restart 1Election Reception\", \"Restart 1 Election Reception\"}}),",
+                "    #\"Merged Peace Officer\" = Table.NestedJoin(#\"Renamed Columns2\", {\"County Parcel Number\"}, #\"Peace Officer\", {\"County Parcel Number\"}, \"Peace Officer\", JoinKind.LeftOuter),",
+                "    #\"Expanded Peace Officer\" = Table.ExpandTableColumn(#\"Merged Peace Officer\", \"Peace Officer\", {\"County Parcel Number\"}, {\"Peace Officer.County Parcel Number\"}),",
+                "    #\"Replaced Current Owner\" = Table.ReplaceValue(#\"Expanded Peace Officer\",each [Current Owner], each if [Peace Officer.County Parcel Number] <> null then \"N/A\" else [Current Owner],Replacer.ReplaceText, {\"Current Owner\"} ),",
+                "    #\"Replaced Original Borrower\" = Table.ReplaceValue(#\"Replaced Current Owner\",each [Original Borrower], each if [Peace Officer.County Parcel Number] <> null then \"N/A\" else [Original Borrower],Replacer.ReplaceText, {\"Original Borrower\"} ),",
+                "",
+                "    #\"Replaced Property Address\" = Table.ReplaceValue(#\"Replaced Original Borrower\",each [Property Address], each if [Peace Officer.County Parcel Number] <> null then \"N/A\" else [Property Address],Replacer.ReplaceText, {\"Property Address\"} ),",
+                "    #\"Replaced Property Address Full\" = Table.ReplaceValue(#\"Replaced Property Address\",each [Property Address Full], each if [Peace Officer.County Parcel Number] <> null then \"N/A\" else [Original Borrower],Replacer.ReplaceText, {\"Property Address Full\"} ),",
+                "    #\"Replaced Legal Description\" = Table.ReplaceValue(#\"Replaced Property Address Full\",each [Legal Description], each if [Peace Officer.County Parcel Number] <> null then \"N/A\" else [Original Borrower],Replacer.ReplaceText, {\"Legal Description\"} ),",
+                "    #\"Removed Peace Officer\" = Table.RemoveColumns(#\"Replaced Legal Description\",{\"Peace Officer.County Parcel Number\"}),",
+                "    #\"Added NED\" = Table.AddColumn(#\"Removed Peace Officer\", \"NED Recorded\", each Text.End([Election And Demand Reception No],10)),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Added NED\",{{\"NED Recorded\", type date}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "ForeclosureDetail",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "PKId",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e6d018f4-1f0a-42d2-8fb7-70048c99c48d",
+            "sourceColumn": "PKId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Attribute",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9a9fd3ff-74fd-4fd1-a011-8d05f0e63843",
+            "sortByColumn": "Attribute Order",
+            "sourceColumn": "Attribute",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Value",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "98470a8e-5f30-4c5d-8c05-78ff8b36aa3a",
+            "sourceColumn": "Value",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Attribute Order",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a0285fff-6407-499d-a252-7bc491720b1f",
+            "sourceColumn": "Attribute Order",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Heading",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "eeb28d93-82a3-47b2-8293-47566c4dd4b8",
+            "sortByColumn": "Heading Order",
+            "sourceColumn": "Heading",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Heading Order",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "87b8b9d3-2733-474a-9774-1a6bd4840838",
+            "sourceColumn": "Heading Order",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "458dbf3d-2ec1-48c5-bc22-44a2a578177c",
+            "sourceColumn": "PT",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "05eb9279-af21-4830-80ba-b7dbee0c256c",
+        "partitions": [
+          {
+            "name": "ForeclosureDetail-7eae5a0a-34fc-4411-b882-6ffaee793115",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = AzureStorage.Blobs(Datalake),",
+                "    #\"v_foreclosure_detail_flat pq\" = Source{[#\"Folder Path\"=\"https://dldwprwestus3.blob.core.windows.net/datalake\",Name=\"consumer/foreclosure/v_foreclosure_detail_flat/v_foreclosure_detail_flat.pq\"]}[Content],",
+                "    #\"Imported Parquet\" = Parquet.Document(#\"v_foreclosure_detail_flat pq\"),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Imported Parquet\", each ([PKId] <> 1561)),",
+                "    #\"Merged Left Anti\" = Table.NestedJoin(#\"Filtered Rows\", {\"PKId\"}, IntradayForeclosureSearch, {\"PKId\"}, \"IntradayForeclosureSearch\", JoinKind.LeftAnti),",
+                "    #\"Appended Query\" = Table.Combine({#\"Merged Left Anti\", IntradayForeclosureSearch}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Appended Query\",{\"IntradayForeclosureSearch\"}),",
+                "    #\"Camel Cap\" = Table.TransformColumnNames(#\"Removed Columns\", each Text.Combine(Splitter.SplitTextByCharacterTransition({\"a\"..\"z\"}, {\"A\"..\"Z\"})(_), \" \" )),",
+                "    #\"Number Cap\" = Table.TransformColumnNames(#\"Camel Cap\", each Text.Combine(Splitter.SplitTextByCharacterTransition({\"a\"..\"z\"}, {\"0\"..\"9\"}) (_), \" \" )),",
+                "    #\"Underscore\" = Table.RenameColumns(#\"Number Cap\", List.Transform(Table.ColumnNames(#\"Number Cap\"), each {_, Text.Replace(_, \"_\", \" \")})),",
+                "    #\"Merged Peace Officer\" = Table.NestedJoin(Underscore, {\"County Parcel Number\"}, #\"Peace Officer\", {\"County Parcel Number\"}, \"Peace Officer\", JoinKind.LeftOuter),",
+                "    #\"Expanded Peace Officer\" = Table.ExpandTableColumn(#\"Merged Peace Officer\", \"Peace Officer\", {\"County Parcel Number\"}, {\"Peace Officer.County Parcel Number\"}),",
+                "    #\"Replaced Current Owner\" = Table.ReplaceValue(#\"Expanded Peace Officer\",each [Current Owner], each if [Peace Officer.County Parcel Number] <> null then \"N/A\" else [Current Owner],Replacer.ReplaceText, {\"Current Owner\"} ),",
+                "    #\"Replaced Original Borrower\" = Table.ReplaceValue(#\"Replaced Current Owner\",each [Original Borrower], each if [Peace Officer.County Parcel Number] <> null then \"N/A\" else [Original Borrower],Replacer.ReplaceText, {\"Original Borrower\"} ),",
+                "",
+                "    #\"Replaced Property Address\" = Table.ReplaceValue(#\"Replaced Original Borrower\",each [Property Address], each if [Peace Officer.County Parcel Number] <> null then \"N/A\" else [Property Address],Replacer.ReplaceText, {\"Property Address\"} ),",
+                "    #\"Replaced Property Address Full\" = Table.ReplaceValue(#\"Replaced Property Address\",each [Property Address Full], each if [Peace Officer.County Parcel Number] <> null then \"N/A\" else [Property Address Full],Replacer.ReplaceText, {\"Property Address Full\"} ),",
+                "    #\"Replaced Legal Description\" = Table.ReplaceValue(#\"Replaced Property Address Full\",each [Legal Description], each if [Peace Officer.County Parcel Number] <> null then \"N/A\" else [Legal Description],Replacer.ReplaceText, {\"Legal Description\"} ),",
+                "",
+                "    #\"Renamed PT\" = Table.RenameColumns(#\"Replaced Legal Description\",{{\"PT NO\", \"PT\"}}),",
+                "    #\"Removed Peace Officer\" = Table.RemoveColumns(#\"Renamed PT\",{\"Peace Officer.County Parcel Number\"}),",
+                "    #\"Changed Bid From Lender\" = Table.TransformColumnTypes(#\"Removed Peace Officer\",{{\"Bid From the Lender\", type number}}),",
+                "    #\"Added Bid Received\" = Table.AddColumn(#\"Changed Bid From Lender\", \"Bid Received\", each if [Bid From the Lender] = null then \"No\" else \"Yes\"),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Added Bid Received\",{{\"Bid From the Lender\", type text}, {\"Bid Total Due\", type text}, {\"Max Sale Date\", type date}, {\"Junior Intent Filed\", type text}}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Changed Type\",\"false\",\"NO\",Replacer.ReplaceText,{\"Junior Intent Filed\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value2\",\"true\",\"YES\",Replacer.ReplaceText,{\"Junior Intent Filed\"}),",
+                "    #\"Add Link\" = Table.AddColumn(#\"Replaced Value3\", \"County Parcel Number Link\", each \"https://apps.douglas.co.us/assessor/web/#/details/\" & [County Parcel Number]),",
+                "    #\"Renamed Deficiency Or Overbid\" = Table.RenameColumns(#\"Add Link\",{{\"Deficiency Or Overbid\", \"Deficiency Or Overbid Raw\"}}),",
+                "    #\"Added Deficiency Or Overbid\" = Table.AddColumn(#\"Renamed Deficiency Or Overbid\", \"Deficiency Or Overbid\", each if [Accepted Bid Final Sale Amount] = 0.00 or [Accepted Bid Final Sale Amount] = null",
+                " then null else [Deficiency Or Overbid Raw]),",
+                "    #\"Removed Deficiency or Overbid Raw\" = Table.RemoveColumns(#\"Added Deficiency Or Overbid\",{\"Deficiency Or Overbid Raw\"}),",
+                "    #\"Unpivoted Columns\" = Table.UnpivotOtherColumns(#\"Removed Deficiency or Overbid Raw\", {\"PKId\",\"PT\"}, \"Attribute\", \"Value Raw\"),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Unpivoted Columns\",{{\"Value Raw\", type text}}),",
+                "    #\"Filtered Rows2\" = Table.SelectRows(#\"Changed Type2\", each ([Value Raw] <> \"\")),",
+                "    #\"Added Value\" = Table.AddColumn(#\"Filtered Rows2\", \"Value\", each if [Attribute] = \"Accepted Bid Final Sale Amount\" or [Attribute] = \"Bid From the Lender\" or [Attribute] = \"Bid Total Due\" or [Attribute] = \"Deficiency Or Overbid\" or [Attribute] = \"Deficiency Or Overbid Raw\" or [Attribute] = \"Original Note Amount\" or [Attribute] = \"Outstanding Balance As Of FC Filing\" or [Attribute] = \"Written Bid From Lender\"",
+                "then",
+                "if Text.Start([Value Raw],1) = \"-\" then",
+                "Text.Format(\"$(#[9]#[8]#[7]#[c2]#[6]#[5]#[4]#[c1]#[th].#[dec])\", ",
+                "[",
+                "9 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) >= 9 then Text.At(Text.Reverse(Text.BeforeDelimiter([Value Raw], \".\")),8) else \"\", ",
+                "8 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) >= 8 then Text.At(Text.Reverse(Text.BeforeDelimiter([Value Raw], \".\")),7) else \"\", ",
+                "7 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) >= 7 then Text.At(Text.Reverse(Text.BeforeDelimiter([Value Raw], \".\")),6) else \"\", ",
+                "c2 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) > 6 then \",\" else \"\",",
+                "6 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) >= 6 then Text.At(Text.Reverse(Text.BeforeDelimiter([Value Raw], \".\")),5) else \"\", ",
+                "5 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) >= 5 then Text.At(Text.Reverse(Text.BeforeDelimiter([Value Raw], \".\")),4) else \"\", ",
+                "4 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) >= 4 then Text.At(Text.Reverse(Text.BeforeDelimiter([Value Raw], \".\")),3) else \"\", ",
+                "c1 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) > 3 then \",\" else \"\",",
+                "th = Text.End(Text.BeforeDelimiter([Value Raw], \".\"),3), ",
+                "dec = Text.Start(Text.AfterDelimiter([Value Raw], \".\"),2)",
+                "    ])",
+                "",
+                "else",
+                "Text.Format(\"$#[9]#[8]#[7]#[c2]#[6]#[5]#[4]#[c1]#[th].#[dec]\", ",
+                "[",
+                "9 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) >= 9 then Text.At(Text.Reverse(Text.BeforeDelimiter([Value Raw], \".\")),8) else \"\", ",
+                "8 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) >= 8 then Text.At(Text.Reverse(Text.BeforeDelimiter([Value Raw], \".\")),7) else \"\", ",
+                "7 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) >= 7 then Text.At(Text.Reverse(Text.BeforeDelimiter([Value Raw], \".\")),6) else \"\", ",
+                "c2 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) > 6 then \",\" else \"\",",
+                "6 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) >= 6 then Text.At(Text.Reverse(Text.BeforeDelimiter([Value Raw], \".\")),5) else \"\", ",
+                "5 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) >= 5 then Text.At(Text.Reverse(Text.BeforeDelimiter([Value Raw], \".\")),4) else \"\", ",
+                "4 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) >= 4 then Text.At(Text.Reverse(Text.BeforeDelimiter([Value Raw], \".\")),3) else \"\", ",
+                "c1 = if Text.Length(Text.BeforeDelimiter([Value Raw], \".\")) > 3 then \",\" else \"\",",
+                "th = Text.End(Text.BeforeDelimiter([Value Raw], \".\"),3), ",
+                "dec = Text.Start(Text.AfterDelimiter([Value Raw], \".\"),2)",
+                "    ])",
+                "else",
+                "[Value Raw]),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Added Value\",\"$(-\",\"$(\",Replacer.ReplaceText,{\"Value\"}),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Replaced Value\",\"$(-,\",\"$(\",Replacer.ReplaceText,{\"Attribute\"}),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Replaced Value1\",{\"Value Raw\"}),",
+                "    #\"Merged Queries\" = Table.NestedJoin(#\"Removed Columns1\", {\"Attribute\"}, ForeclosureDetail_Order, {\"Column Name\"}, \"ForeclosureDetail_Order\", JoinKind.LeftOuter),",
+                "    #\"Expanded ForeclosureDetail_Order\" = Table.ExpandTableColumn(#\"Merged Queries\", \"ForeclosureDetail_Order\", {\"Column Order\", \"Heading\", \"Heading Order\"}, {\"ForeclosureDetail_Order.Column Order\", \"ForeclosureDetail_Order.Heading\", \"ForeclosureDetail_Order.Heading Order\"}),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Expanded ForeclosureDetail_Order\",{{\"ForeclosureDetail_Order.Column Order\", \"Attribute Order\"}, {\"ForeclosureDetail_Order.Heading\", \"Heading\"}, {\"ForeclosureDetail_Order.Heading Order\", \"Heading Order\"}})",
+                "in",
+                "    #\"Renamed Columns1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Foreclosure Location",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "x",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "double",
+            "isHidden": true,
+            "lineageTag": "41d35fe6-7913-4779-97f2-fa905aa7ab1f",
+            "sourceColumn": "x",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "y",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "double",
+            "isHidden": true,
+            "lineageTag": "e1a49525-8e9b-4ed3-a730-3e9fedfd6ba6",
+            "sourceColumn": "y",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "County Parcel Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "47f73370-d65a-4f76-8f65-31a4464f3b5d",
+            "sourceColumn": "County Parcel Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "State Parcel Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f47581e0-0ed6-4b57-9f0d-7b36d865f4cb",
+            "sourceColumn": "State Parcel Number",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "581dfff9-7869-4dbd-b511-ceba2b59dcbb",
+        "partitions": [
+          {
+            "name": "Foreclosure Location-3c3b63ea-30e0-4e25-a8b0-73d2e74fb350",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = AzureStorage.Blobs(Datalake),",
+                "    #\"v_foreclosure_detail_flat pq\" = Source{[#\"Folder Path\"=\"https://dldwprwestus3.blob.core.windows.net/datalake\",Name=\"consumer/assessor/location.location_data/location.location_data.pq\"]}[Content],",
+                "    #\"Imported Parquet\" = Parquet.Document(#\"v_foreclosure_detail_flat pq\"),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Imported Parquet\",{\"write_date\", \"Location\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Columns\",{{\"Account_Number\", \"County Parcel Number\"}, {\"State_Parcel_number\", \"State Parcel Number\"}}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Renamed Columns\", each ([x] <> null) and ([State Parcel Number] <> null))",
+                "in",
+                "    #\"Filtered Rows\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Lienor Address",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "PKId",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "c51b6cdd-5b80-4f22-8162-297f98fc63a2",
+            "sourceColumn": "PKId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "File ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "517cde28-875a-4acb-8b9b-2dddcc6a7c73",
+            "sourceColumn": "File ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "4b6b04e2-880d-4aac-b2c9-08f59cd5450f",
+            "sourceColumn": "Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Name 2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "800fb0f0-2393-42ad-af28-540044e02835",
+            "sourceColumn": "Name 2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Address 1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "3c554dee-7ec9-4e69-a928-3ebcd87e70b7",
+            "sourceColumn": "Address 1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Address 2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "d641b775-fbb8-435f-b66c-d5fece758eac",
+            "sourceColumn": "Address 2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Address 3",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "0d069172-40e8-435e-8e2a-2a3b1c0a5794",
+            "sourceColumn": "Address 3",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "df2a5839-b689-49c8-b247-00223c67f116",
+            "sourceColumn": "City",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "State",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "1f1ab7db-02fd-49bb-b91f-2638f9b95684",
+            "sourceColumn": "State",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Zip",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "eea14d7a-b8c6-40b0-a4a3-3f88e6024dfc",
+            "sourceColumn": "Zip",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "City State Zip",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "67ddd1c9-7b78-4e69-a315-e1d4a77ee7dc",
+            "sourceColumn": "City State Zip",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "0924f707-cf57-4583-95ec-7eabc2ec298c",
+            "sourceColumn": "Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "County Parcel Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "26591f4c-1461-4eb6-9dcf-504d9c4177a2",
+            "sourceColumn": "County Parcel Number",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "0ecc86e0-652e-44cd-baeb-825c37408367",
+        "partitions": [
+          {
+            "name": "Lienor Address-fda627e8-4423-44c7-ac79-f09e4e644f2d",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = AzureStorage.Blobs(Datalake),",
+                "    #\"tblFile_Lienor pq\" = Source{[#\"Folder Path\"=\"https://dldwprwestus3.blob.core.windows.net/datalake\",Name=\"consumer/foreclosure/tblFile_Lienor/tblFile_Lienor.pq\"]}[Content],",
+                "    #\"Imported Parquet\" = Parquet.Document(#\"tblFile_Lienor pq\"),",
+                "    #\"Camel Cap\" = Table.TransformColumnNames(#\"Imported Parquet\", each Text.Combine(Splitter.SplitTextByCharacterTransition({\"a\"..\"z\"}, {\"A\"..\"Z\"})(_), \" \" )),",
+                "    #\"Number Cap\" = Table.TransformColumnNames(#\"Camel Cap\", each Text.Combine(Splitter.SplitTextByCharacterTransition({\"a\"..\"z\"}, {\"0\"..\"9\"}) (_), \" \" )),",
+                "    #\"Underscore\" = Table.RenameColumns(#\"Number Cap\", List.Transform(Table.ColumnNames(#\"Number Cap\"), each {_, Text.Replace(_, \"_\", \" \")})),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(Underscore,{\"Created\", \"Edited\", \"Edited By\"}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Removed Columns\",\"\",null,Replacer.ReplaceValue,{\"Lienor Name 2\"}),",
+                "    #\"Added CityStateZip\" = Table.AddColumn(#\"Replaced Value\", \"City State Zip\", each Text.Combine({[City],\", \",[State],\" \",[Zip]})),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Added CityStateZip\",{{\"Lienor Name\", \"Name\"}, {\"Lienor Name 2\", \"Name 2\"}}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Renamed Columns\", \"Type\", each \"Lienor\")",
+                "in",
+                "    #\"Added Custom\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Grantor Address",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "PKId",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "fe07e96e-3f1f-496e-9e45-942c4221fbaa",
+            "sourceColumn": "PKId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "File ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "166e6a06-19ae-4db9-8f5e-90df934348cf",
+            "sourceColumn": "File ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Grantor Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "4566b3d3-7c13-435d-b7fd-423de0ad0d23",
+            "sourceColumn": "Grantor Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Property Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "8a002429-e832-4f77-80cd-ea6636c2beb5",
+            "sourceColumn": "Property Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "48bdda99-01e2-4442-bbf4-79b7d6467854",
+            "sourceColumn": "Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Address 1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "cd8cf04a-1920-49d6-9a61-c85412fad2e6",
+            "sourceColumn": "Address 1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Address 2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "fe5baece-d70e-4e1d-8c5c-f642c9852fce",
+            "sourceColumn": "Address 2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Address 3",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "f756913d-b4f5-45a9-8a6e-587e5a9a3637",
+            "sourceColumn": "Address 3",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "c6d161d5-d7f1-483a-b9ff-3a3c16788902",
+            "sourceColumn": "City",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "State",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "137ae5a4-fd45-443a-a12e-932a80f4f5ee",
+            "sourceColumn": "State",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Zip",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "5bb6be16-87e2-42bf-b52a-8a655ab05bbf",
+            "sourceColumn": "Zip",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "City State Zip",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "fba4909a-170e-492f-83e2-e87c1fe4df4c",
+            "sourceColumn": "City State Zip",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "0959853b-4e84-4294-811d-34249a478872",
+            "sourceColumn": "Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "County Parcel Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2313b4fa-c9e6-4569-8b55-917b67439a35",
+            "sourceColumn": "County Parcel Number",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "5a7f7da0-fe8a-4172-8245-813474b7b40d",
+        "partitions": [
+          {
+            "name": "Grantor Address-8f9edd27-6e07-4e28-809b-ffe505135a36",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = AzureStorage.Blobs(Datalake),",
+                "    #\"v_foreclosure_detail_flat pq\" = Source{[#\"Folder Path\"=\"https://dldwprwestus3.blob.core.windows.net/datalake\",Name=\"consumer/foreclosure/tblFile_TrustorAddress/tblFile_TrustorAddress.pq\"]}[Content],",
+                "    #\"Imported Parquet\" = Parquet.Document(#\"v_foreclosure_detail_flat pq\"),",
+                "    #\"Camel Cap\" = Table.TransformColumnNames(#\"Imported Parquet\", each Text.Combine(Splitter.SplitTextByCharacterTransition({\"a\"..\"z\"}, {\"A\"..\"Z\"})(_), \" \" )),",
+                "    #\"Number Cap\" = Table.TransformColumnNames(#\"Camel Cap\", each Text.Combine(Splitter.SplitTextByCharacterTransition({\"a\"..\"z\"}, {\"0\"..\"9\"}) (_), \" \" )),",
+                "    #\"Underscore\" = Table.RenameColumns(#\"Number Cap\", List.Transform(Table.ColumnNames(#\"Number Cap\"), each {_, Text.Replace(_, \"_\", \" \")})),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(Underscore,{\"Phone\", \"Fax\", \"Email\", \"Created\", \"Edited\", \"Edited By\", \"Lookup Name\", \"Tax Parcel\"}),",
+                "    #\"Added CityStateZip\" = Table.AddColumn(#\"Removed Columns\", \"City State Zip\", each Text.Combine({[City],\", \",[State],\" \",[Zip]})),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Added CityStateZip\",{{\"Trustor Type\", \"Grantor Type\"}}),",
+                "    #\"Added Custom\" = Table.AddColumn(#\"Renamed Columns\", \"Type\", each \"Grantor\")",
+                "in",
+                "    #\"Added Custom\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "IntradayForeclosureSearch",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "PKId",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isHidden": true,
+            "lineageTag": "e0b25745-628d-46c6-a212-bf5ef7eb046a",
+            "sourceColumn": "PKId",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "Edited",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "lineageTag": "455c52c5-a4dc-490d-87e0-1e5d0d13b868",
+            "sourceColumn": "Edited",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NOTSPublisher",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isHidden": true,
+            "lineageTag": "0b16be52-99d2-4757-8e7e-2b91e9f60724",
+            "sourceColumn": "NOTSPublisher",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BKFiled",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isHidden": true,
+            "lineageTag": "5d26ce2d-5a11-44ad-8bc9-cc879d73ad00",
+            "sourceColumn": "BKFiled",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Beneficiary",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "0fecf75c-da30-401f-9033-87ae2ceae85b",
+            "sourceColumn": "Beneficiary",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Subdivision",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "76fecaa3-389c-4a1c-b47b-51711795dd8f",
+            "sourceColumn": "Subdivision",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Continuances",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "e23a2aad-ed40-4faa-ba7a-ccca553d9ed7",
+            "sourceColumn": "Continuances",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Purchaser",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "ae48d57a-a738-4f33-bb80-9eb2ce2680d2",
+            "sourceColumn": "Purchaser",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PT_NO",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "772a26dd-97c7-41f8-9a2d-ba1a79b29489",
+            "sourceColumn": "PT_NO",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DateFileReceived",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "lineageTag": "c2f4802f-3a01-4583-b33f-5fa8f4b0e834",
+            "sourceColumn": "DateFileReceived",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "JuniorIntentFiled",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isHidden": true,
+            "lineageTag": "0640f7e0-f355-4290-bc5d-4a24becbee61",
+            "sourceColumn": "JuniorIntentFiled",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MaxSaleDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "lineageTag": "d408f6b8-bc92-4ab4-afab-3d0fce372f37",
+            "sourceColumn": "MaxSaleDate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PropertyType",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "c778ca49-ab45-478f-93af-c2d01b894f20",
+            "sourceColumn": "PropertyType",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PropertyTypeDescription",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "5367c821-23ec-45c6-9634-6d56add6ad4d",
+            "sourceColumn": "PropertyTypeDescription",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PublicTDReception",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "041740eb-7179-4d05-95e8-41f7b95a0b7d",
+            "sourceColumn": "PublicTDReception",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PublicTDRecorded",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "lineageTag": "ac35c38d-78fd-47c8-95d3-a1a34f843740",
+            "sourceColumn": "PublicTDRecorded",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Restart1ElectionReception",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "ec59d4fc-c3ce-4e3b-807f-fbb6084851d8",
+            "sourceColumn": "Restart1ElectionReception",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Restart1ElectionRecorded",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "lineageTag": "4034e038-20f3-4401-977a-7eb71b3cbc36",
+            "sourceColumn": "Restart1ElectionRecorded",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RerecordingDate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isHidden": true,
+            "lineageTag": "1575a6ff-eb5d-49f0-b6c3-5eeacd3e4fff",
+            "sourceColumn": "RerecordingDate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RerecordingNumber",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "3983628a-72fe-4eb7-9f1a-ad1313e035aa",
+            "sourceColumn": "RerecordingNumber",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "OriginalElectionReRecorded",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isHidden": true,
+            "lineageTag": "b8c4531f-e881-4b71-b167-3e62d88a4f1b",
+            "sourceColumn": "OriginalElectionReRecorded",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Restart1ElectionReRecorded",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "boolean",
+            "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
+            "isHidden": true,
+            "lineageTag": "2eea7f70-c161-4650-ae35-203ad75d8bc0",
+            "sourceColumn": "Restart1ElectionReRecorded",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Current_Owner",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "70fd72c7-880a-4cbf-bf3b-82d4b04d4b66",
+            "sourceColumn": "Current_Owner",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Original_Borrower",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "ffeb1d2b-7361-4d8f-8d83-50268c745e4d",
+            "sourceColumn": "Original_Borrower",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "County_Parcel_Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "e811d94e-b935-44b6-a353-f39a80ed31d0",
+            "sourceColumn": "County_Parcel_Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "State_Parcel_Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "0f344a50-4800-413f-a045-cbb19563a4de",
+            "sourceColumn": "State_Parcel_Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Property_Address_Full",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "fcfcbcbd-6367-40d2-b0ed-f077608ff1fb",
+            "sourceColumn": "Property_Address_Full",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Property_Address",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "7e6b2a9a-188b-451a-bbe0-50014b08b6c2",
+            "sourceColumn": "Property_Address",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Property_City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "253bd766-f9bd-4f3c-b987-bc167e79206f",
+            "sourceColumn": "Property_City",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Property_Zip",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "7168dac1-6750-440f-b737-fa0151b8eac2",
+            "sourceColumn": "Property_Zip",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Legal_Description",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "d124fe37-107a-43ee-8f24-68840957ab21",
+            "sourceColumn": "Legal_Description",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Deed_Of_Trust_Reception_No",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "e7615004-cfd1-4a6f-a23b-3692fd61bc6e",
+            "sourceColumn": "Deed_Of_Trust_Reception_No",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Original_Note_Amount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "55f75238-5c99-4e48-aa94-fbc67eb6c4a3",
+            "sourceColumn": "Original_Note_Amount",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Outstanding_Balance_As_Of_FC_Filing",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "3ef95d8a-8d17-4ed5-8c5a-a00447eafa14",
+            "sourceColumn": "Outstanding_Balance_As_Of_FC_Filing",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Interest_Rate",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "74b1a68a-40d9-4061-98a9-bf53a373f832",
+            "sourceColumn": "Interest_Rate",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Attorney_For_Beneficiary",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "8d56302c-3b12-4cd1-b63b-da7e41420e02",
+            "sourceColumn": "Attorney_For_Beneficiary",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Attorney_File_Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "83235c8e-6faa-4b3c-a7de-5d00d106b423",
+            "sourceColumn": "Attorney_File_Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Attorney_Phone_Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "33644674-b55b-472c-8bbf-5c22a741330f",
+            "sourceColumn": "Attorney_Phone_Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Attorney_Address",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "c90b9d32-370b-4916-bc7f-11fc693f6d15",
+            "sourceColumn": "Attorney_Address",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Foreclosure_Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "e92598f1-62b5-442e-bb29-2a22b32ccae6",
+            "sourceColumn": "Foreclosure_Status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "OnHold",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "2a7691f1-d258-4184-a602-f6a7322bf1d6",
+            "sourceColumn": "OnHold",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Hold_Issue",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "04689706-9eb6-4478-8663-d857a2343eae",
+            "sourceColumn": "Hold_Issue",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Election_And_Demand_Reception_No",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "791a16d2-a410-41ed-ac89-a6c924d0c4c9",
+            "sourceColumn": "Election_And_Demand_Reception_No",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Combined_Notice_Mailed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "de976a24-6662-4f28-aaf4-f0bb317ecab8",
+            "sourceColumn": "Combined_Notice_Mailed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cure_Intent_Due_By",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "fea286ed-5ef1-49b4-bf13-0a7c9e468c2d",
+            "sourceColumn": "Cure_Intent_Due_By",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Cure_Intent_Filed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "b8e96500-12a0-4afa-8ee9-38575cbdcf09",
+            "sourceColumn": "Cure_Intent_Filed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Original_Scheduled_Sale_Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "d6e6f9bd-4077-4c5d-8298-7fd4f13ee892",
+            "sourceColumn": "Original_Scheduled_Sale_Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Current_Sale_Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "5f57e6b4-577c-4c36-829f-34175a495f8d",
+            "sourceColumn": "Current_Sale_Date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bid_From_the_Lender",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "cfa0231d-6276-4caf-bf43-29d580a7cce7",
+            "sourceColumn": "Bid_From_the_Lender",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Notice_Of_Sale_Published",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "54141cc1-f268-4cd5-917d-485ea12d3214",
+            "sourceColumn": "Notice_Of_Sale_Published",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Notice_Of_Sale_Publisher",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "9fa60715-cb8a-4977-a9d4-457d9102c4c8",
+            "sourceColumn": "Notice_Of_Sale_Publisher",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date_Sold",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "9781b88b-3bf8-4fec-a548-ba6ade77c88a",
+            "sourceColumn": "Date_Sold",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Written_Bid_From_Lender",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "73a8b255-b840-4244-acf6-29d0465a9046",
+            "sourceColumn": "Written_Bid_From_Lender",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BidTotalDue",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "double",
+            "isHidden": true,
+            "lineageTag": "d7beed6d-14ae-4c37-8644-ee7ccc714e88",
+            "sourceColumn": "BidTotalDue",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Accepted_Bid_Final_Sale_Amount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "a322bc89-b9d8-41a2-b808-2211fc1ed490",
+            "sourceColumn": "Accepted_Bid_Final_Sale_Amount",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Deficiency_Or_Overbid",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "49f3e243-d9b9-426b-a44d-f74bc5404ab9",
+            "sourceColumn": "Deficiency_Or_Overbid",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Certificate_Of_Purchase_Reception_No",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "c580f6e0-3bbd-41c9-abf3-a6936494f31f",
+            "sourceColumn": "Certificate_Of_Purchase_Reception_No",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Intent_to_Redeem_Due_By",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "52b6c5e2-5022-4530-bb9f-a9f4c99dd088",
+            "sourceColumn": "Intent_to_Redeem_Due_By",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date_Closed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "44a8745b-08fd-46a8-b2ea-1810208229b9",
+            "sourceColumn": "Date_Closed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Reason_Closed",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "3af8dd4b-4cff-418e-9c02-4a683d0331d5",
+            "sourceColumn": "Reason_Closed",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Withdrawal_Reception_No",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "34da02d3-8227-484c-94cc-e47738e37352",
+            "sourceColumn": "Withdrawal_Reception_No",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Withdrawal_Recorded",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "bb69b8ba-e2b7-4c8a-97bb-07cfcabac299",
+            "sourceColumn": "Withdrawal_Recorded",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "3625e8fb-2f8d-47e0-b4df-e7350ac5e86b",
+        "partitions": [
+          {
+            "name": "IntradayForeclosureSearch-627a0cc9-0d57-4a01-b6c9-176301179c65",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = AzureStorage.Blobs(Datalake),",
+                "    #\"v_foreclosure_detail_flat pq\" = Source{[#\"Folder Path\"=\"https://dldwprwestus3.blob.core.windows.net/datalake\",Name=\"consumer/foreclosure/v_foreclosure_detail_flat/interday_v_foreclosure_detail_flat.pq\"]}[Content],",
+                "    #\"Imported Parquet\" = Parquet.Document(#\"v_foreclosure_detail_flat pq\")",
+                "in",
+                "    #\"Imported Parquet\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Peace Officer",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "County Parcel Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "3526bc67-7edf-4290-87e7-09f1547ffc73",
+            "sourceColumn": "County Parcel Number",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "ca1ea3d9-fe51-4dc3-87a3-5e60ab5daaa3",
+        "partitions": [
+          {
+            "name": "Peace Officer-2a276ec2-53ff-48b0-8cc8-5335e23bc371",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = AzureStorage.Blobs(Datalake),",
+                "    #\"v_foreclosure_detail_flat pq\" = Source{[#\"Folder Path\"=\"https://dldwprwestus3.blob.core.windows.net/datalake\",Name=\"consumer/peace_officer/dc_central/officer_property_account.pq\"]}[Content],",
+                "    #\"Imported Parquet\" = Parquet.Document(#\"v_foreclosure_detail_flat pq\"),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Imported Parquet\",{\"NAME1\", \"ADDRESS1\", \"CITY\", \"ZIPCODE\", \"STATECODE\", \"PRIVATEFLAG\", \"CREATE_DTM\", \"CREATE_USER_ID\", \"UPDATE_DTM\", \"UPDATE_USER_ID\", \"PARCELNO\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Columns\",{{\"ACCOUNTNO\", \"County Parcel Number\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Redemption",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "PKId",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "01364421-dde8-4dc3-a3ff-0ffabbaea162",
+            "sourceColumn": "PKId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "59387e0a-1fe2-428f-920b-d8f1d6987ba9",
+            "sourceColumn": "PT",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Attribute",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              },
+              {
+                "property": "SortByColumn"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "116f7b10-a602-450e-81b2-673e83c9b59f",
+            "sortByColumn": "ForeclosureDetail_Order.Column Order",
+            "sourceColumn": "Attribute",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Value",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "12f05e30-067a-4ab1-882a-b082f4b6e75a",
+            "sourceColumn": "Value",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ForeclosureDetail_Order.Column Order",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "e224fcdb-90c4-46b0-86f0-d279dc05ad4b",
+            "sourceColumn": "ForeclosureDetail_Order.Column Order",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ForeclosureDetail_Order.Heading",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2258b038-dc6d-46ec-9798-83e9018116e0",
+            "sourceColumn": "ForeclosureDetail_Order.Heading",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ForeclosureDetail_Order.Heading Order",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "3541c516-c59b-4568-af4f-49f73035911f",
+            "sourceColumn": "ForeclosureDetail_Order.Heading Order",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Redemption Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "8e43b56e-1d99-487a-923c-69beb4595b7e",
+            "sourceColumn": "Redemption Priority",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "6f1ca40c-a6d7-4386-9c9d-19838d99fa29",
+        "partitions": [
+          {
+            "name": "Redemption-c348ee6a-134e-4e7d-968d-b3d688df49e0",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = AzureStorage.Blobs(Datalake),",
+                "    #\"tblFile_Redemption pq\" = Source{[#\"Folder Path\"=\"https://dldwprwestus3.blob.core.windows.net/datalake\",Name=\"consumer/foreclosure/tblFile_Redemption/tblFile_Redemption.pq\"]}[Content],",
+                "    #\"Imported Parquet\" = Parquet.Document(#\"tblFile_Redemption pq\"),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Imported Parquet\",{{\"RedemptionLienAmount\", \"RedemptionLienAmountRaw\"}, {\"RedemptionAmountDue\", \"RedemptionAmountDueRaw\"}}),",
+                "    #\"Camel Cap\" = Table.TransformColumnNames(#\"Renamed Columns\", each Text.Combine(Splitter.SplitTextByCharacterTransition({\"a\"..\"z\"}, {\"A\"..\"Z\"})(_), \" \" )),",
+                "    #\"Number Cap\" = Table.TransformColumnNames(#\"Camel Cap\", each Text.Combine(Splitter.SplitTextByCharacterTransition({\"a\"..\"z\"}, {\"0\"..\"9\"}) (_), \" \" )),",
+                "    #\"Underscore\" = Table.RenameColumns(#\"Number Cap\", List.Transform(Table.ColumnNames(#\"Number Cap\"), each {_, Text.Replace(_, \"_\", \" \")})),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Underscore,{{\"Redemption COR Recorded\", type date}, {\"Redemption Ends\", type date}, {\"Redemption Lien Recorded\", type date}, {\"Redemption Intent Filed\", type date}, {\"Redemption First Date\", type date}, {\"Redemption Amount Due Raw\", type text}, {\"Redemption Lien Amount Raw\", type text}}),",
+                "    #\"Added Redemption Lien Amount\" = Table.AddColumn(#\"Changed Type\", \"Redemption Lien Amount\", each Text.Format(\"$#[9]#[8]#[7]#[c2]#[6]#[5]#[4]#[c1]#[th].#[dec]\", ",
+                "[",
+                "9 = if Text.Length(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\")) >= 8 then Text.At(Text.Reverse(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\")),8) else \"\", ",
+                "8 = if Text.Length(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\")) >= 8 then Text.At(Text.Reverse(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\")),7) else \"\", ",
+                "7 = if Text.Length(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\")) >= 7 then Text.At(Text.Reverse(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\")),6) else \"\", ",
+                "c2 = if Text.Length(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\")) > 6 then \",\" else \"\",",
+                "6 = if Text.Length(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\")) >= 6 then Text.At(Text.Reverse(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\")),5) else \"\", ",
+                "5 = if Text.Length(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\")) >= 5 then Text.At(Text.Reverse(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\")),4) else \"\", ",
+                "4 = if Text.Length(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\")) >= 4 then Text.At(Text.Reverse(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\")),3) else \"\", ",
+                "c1 = if Text.Length(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\")) > 3 then \",\" else \"\",",
+                "th = Text.End(Text.BeforeDelimiter([Redemption Lien Amount Raw], \".\"),3), ",
+                "dec = Text.Start(Text.AfterDelimiter([Redemption Lien Amount Raw], \".\"),2)",
+                "    ])),",
+                "    #\"Added Redemption Amount Due\" = Table.AddColumn(#\"Added Redemption Lien Amount\", \"Redemption Amount Due\", each Text.Format(\"$#[9]#[8]#[7]#[c2]#[6]#[5]#[4]#[c1]#[th].#[dec]\", ",
+                "[",
+                "9 = if Text.Length(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\")) >= 8 then Text.At(Text.Reverse(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\")),8) else \"\", ",
+                "8 = if Text.Length(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\")) >= 8 then Text.At(Text.Reverse(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\")),7) else \"\", ",
+                "7 = if Text.Length(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\")) >= 7 then Text.At(Text.Reverse(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\")),6) else \"\", ",
+                "c2 = if Text.Length(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\")) > 6 then \",\" else \"\",",
+                "6 = if Text.Length(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\")) >= 6 then Text.At(Text.Reverse(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\")),5) else \"\", ",
+                "5 = if Text.Length(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\")) >= 5 then Text.At(Text.Reverse(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\")),4) else \"\", ",
+                "4 = if Text.Length(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\")) >= 4 then Text.At(Text.Reverse(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\")),3) else \"\", ",
+                "c1 = if Text.Length(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\")) > 3 then \",\" else \"\",",
+                "th = Text.End(Text.BeforeDelimiter([Redemption Amount Due Raw], \".\"),3), ",
+                "dec = Text.Start(Text.AfterDelimiter([Redemption Amount Due Raw], \".\"),2)",
+                "    ])),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Added Redemption Amount Due\",{\"Redemption Lien Amount Raw\", \"Redemption Amount Due Raw\"}),",
+                "    #\"Unpivoted Columns\" = Table.UnpivotOtherColumns(#\"Removed Columns\", {\"PKId\", \"PT\", \"Redemption Priority\"}, \"Attribute\", \"Value\"),",
+                "    #\"Merged Queries\" = Table.NestedJoin(#\"Unpivoted Columns\", {\"Attribute\"}, ForeclosureDetail_Order, {\"Column Name\"}, \"ForeclosureDetail_Order\", JoinKind.LeftOuter),",
+                "    #\"Expanded ForeclosureDetail_Order\" = Table.ExpandTableColumn(#\"Merged Queries\", \"ForeclosureDetail_Order\", {\"Column Order\", \"Heading\", \"Heading Order\"}, {\"ForeclosureDetail_Order.Column Order\", \"ForeclosureDetail_Order.Heading\", \"ForeclosureDetail_Order.Heading Order\"}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Expanded ForeclosureDetail_Order\",\"$.\",\" \",Replacer.ReplaceValue,{\"Value\"})",
+                "in",
+                "    #\"Replaced Value\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Addresses",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "PKId",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "16c6a155-8147-4890-b6ea-63210c3d100b",
+            "sourceColumn": "PKId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "File ID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "bdf5f856-5580-45bd-9df2-3990af680be7",
+            "sourceColumn": "File ID",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Name",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "18d45b72-d2ec-4536-a3b1-f44d8e5f34b3",
+            "sourceColumn": "Name",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Name 2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "99d70a9f-617a-4b44-b6f2-0e8a99bc26e8",
+            "sourceColumn": "Name 2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Address 1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "82f694e7-b7b2-4918-b77c-0041ec4ec7ea",
+            "sourceColumn": "Address 1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Address 2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d34ee1d3-510b-4bcb-9ed8-3071a4d9c149",
+            "sourceColumn": "Address 2",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Address 3",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3b6317ff-46d5-4a9e-9a94-c990e3c6c02b",
+            "sourceColumn": "Address 3",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "City State Zip",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "edfd886a-10ff-4cdf-b208-2cd75203c474",
+            "sourceColumn": "City State Zip",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "59ef16ac-a04f-47b2-aa21-ded68f3ed47c",
+            "sourceColumn": "Type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "County Parcel Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6a2519c6-7007-45f8-b301-d31679d40bd4",
+            "sourceColumn": "County Parcel Number",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Peace Officer.County Parcel Number",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "6a754d49-7ecc-4ab3-b1c0-e21f68a2cac3",
+            "sourceColumn": "Peace Officer.County Parcel Number",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3bf4c761-fdde-4e48-987c-d21b4a6363fe",
+        "partitions": [
+          {
+            "name": "Addresses-d5eb665c-2fae-4d03-830e-2b0c0120899d",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.Combine({#\"Lienor Address\", #\"Grantor Address\"}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(Source,{\"Grantor Type\", \"Property Type\", \"City\", \"State\", \"Zip\"}),",
+                "    #\"Merged Queries\" = Table.NestedJoin(#\"Removed Columns\", {\"County Parcel Number\"}, #\"Peace Officer\", {\"County Parcel Number\"}, \"Peace Officer\", JoinKind.LeftOuter),",
+                "    #\"Expanded Peace Officer\" = Table.ExpandTableColumn(#\"Merged Queries\", \"Peace Officer\", {\"County Parcel Number\"}, {\"Peace Officer.County Parcel Number\"}),",
+                "    #\"Replaced Name\" = Table.ReplaceValue(#\"Expanded Peace Officer\",each [Name], each if [Peace Officer.County Parcel Number] <> null then \"N/A\" else [Name],Replacer.ReplaceText,{\"Name\"}),",
+                "    #\"Replaced Address 1\" = Table.ReplaceValue(#\"Replaced Name\",each [Address 1], each if [Peace Officer.County Parcel Number] <> null then \"N/A\" else [Address 1],Replacer.ReplaceText,{\"Address 1\"}),",
+                "    #\"Replaced Address 2\" = Table.ReplaceValue(#\"Replaced Address 1\",each [Address 2], each if [Peace Officer.County Parcel Number] <> null then \"N/A\" else [Address 2],Replacer.ReplaceText,{\"Address 2\"}),",
+                "    #\"Replaced Address 3\" = Table.ReplaceValue(#\"Replaced Address 2\",each [Address 3], each if [Peace Officer.County Parcel Number] <> null then \"N/A\" else [Address 3],Replacer.ReplaceText,{\"Address 3\"})",
+                "    in",
+                "        #\"Replaced Address 3\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Redemption Links",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "PKId",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "282f6b94-0728-42b7-9b64-2f492e13a4a2",
+            "sourceColumn": "PKId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "10dde97e-3801-48d2-b52a-7db0e0d0d5b3",
+            "sourceColumn": "PT",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Redemption Priority",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "205d8da4-2bd9-466f-b61f-2a480778bdfd",
+            "sourceColumn": "Redemption Priority",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Redemption Lien Reception",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "84cc622a-f85a-4d87-ad27-da5fb49e916b",
+            "sourceColumn": "Redemption Lien Reception",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Redemption COR Reception",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "8a885843-1f18-4cc7-b7b2-4aceb488d2e3",
+            "sourceColumn": "Redemption COR Reception",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Redemption Lien Reception Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "expression": [
+              "",
+              "    SWITCH(true",
+              "        ,'Redemption Links'[Redemption Lien Reception DocumentId] <> BLANK()",
+              "            , CONCATENATE(\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\", 'Redemption Links'[Redemption Lien Reception DocumentId])",
+              "        , BLANK()",
+              "    )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "b5a0cce0-7197-4e2e-aa51-d2f00c43c27f",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Redemption COR Reception Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "expression": [
+              "",
+              "    SWITCH(true",
+              "        ,'Redemption Links'[Redemption COR Reception DocumentId] <> BLANK()",
+              "            , CONCATENATE(\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\", 'Redemption Links'[Redemption COR Reception DocumentId])",
+              "        , BLANK()",
+              "    )"
+            ],
+            "isDataTypeInferred": true,
+            "lineageTag": "1cdfdb85-0949-4086-826f-42305dd796c6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Redemption COR Reception DocumentId",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e8f29b43-6903-4d4a-bf86-848c63738063",
+            "sourceColumn": "Redemption COR Reception DocumentId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Redemption Lien Reception DocumentId",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2fa78fb9-347d-4fad-86c4-d5bf256ba3c0",
+            "sourceColumn": "Redemption Lien Reception DocumentId",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "f40dfa29-37b3-40f4-80f8-19ab21ee3808",
+        "partitions": [
+          {
+            "name": "Redemption Links-c5c62887-7208-4bbe-90cf-ed2116a820c0",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = AzureStorage.Blobs(#\"Datalake (2)\"),",
+                "    #\"tblFile_Redemption pq\" = Source{[#\"Folder Path\"=\"https://dldwprwestus3.blob.core.windows.net/datalake\",Name=\"consumer/foreclosure/tblFile_Redemption/tblFile_Redemption.pq\"]}[Content],",
+                "    #\"Imported Parquet\" = Parquet.Document(#\"tblFile_Redemption pq\"),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Imported Parquet\",{{\"RedemptionLienAmount\", \"RedemptionLienAmountRaw\"}, {\"RedemptionAmountDue\", \"RedemptionAmountDueRaw\"}}),",
+                "    #\"Camel Cap\" = Table.TransformColumnNames(#\"Renamed Columns\", each Text.Combine(Splitter.SplitTextByCharacterTransition({\"a\"..\"z\"}, {\"A\"..\"Z\"})(_), \" \" )),",
+                "    #\"Number Cap\" = Table.TransformColumnNames(#\"Camel Cap\", each Text.Combine(Splitter.SplitTextByCharacterTransition({\"a\"..\"z\"}, {\"0\"..\"9\"}) (_), \" \" )),",
+                "    #\"Underscore\" = Table.RenameColumns(#\"Number Cap\", List.Transform(Table.ColumnNames(#\"Number Cap\"), each {_, Text.Replace(_, \"_\", \" \")})),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Underscore,{{\"Redemption COR Recorded\", type date}, {\"Redemption Ends\", type date}, {\"Redemption Lien Recorded\", type date}, {\"Redemption Intent Filed\", type date}, {\"Redemption First Date\", type date}, {\"Redemption Amount Due Raw\", type text}, {\"Redemption Lien Amount Raw\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Redemption Lien Amount Raw\", \"Redemption Amount Due Raw\", \"Redemption Lienor\", \"Redemption Intent Filed\", \"Redemption Lien Recorded\", \"Redemption COR Recorded\", \"Redemption Ends\", \"Redemption Comments\", \"Redemption First Date\"}),",
+                "    #\"Merged Queries\" = Table.NestedJoin(#\"Removed Columns\", {\"Redemption COR Reception\"}, #\"Landmark DocumentId\", {\"ClerkFileNumber\"}, \"Landmark DocumentId\", JoinKind.LeftOuter),",
+                "    #\"Expanded Landmark DocumentId\" = Table.ExpandTableColumn(#\"Merged Queries\", \"Landmark DocumentId\", {\"DocumentId\"}, {\"DocumentId\"}),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Expanded Landmark DocumentId\",{{\"DocumentId\", \"Redemption COR Reception DocumentId\"}}),",
+                "    #\"Merged Queries1\" = Table.NestedJoin(#\"Renamed Columns1\", {\"Redemption Lien Reception\"}, #\"Landmark DocumentId\", {\"ClerkFileNumber\"}, \"Landmark DocumentId\", JoinKind.LeftOuter),",
+                "    #\"Expanded Landmark DocumentId1\" = Table.ExpandTableColumn(#\"Merged Queries1\", \"Landmark DocumentId\", {\"DocumentId\"}, {\"DocumentId\"}),",
+                "    #\"Renamed Columns2\" = Table.RenameColumns(#\"Expanded Landmark DocumentId1\",{{\"DocumentId\", \"Redemption Lien Reception DocumentId\"}})",
+                "in",
+                "    #\"Renamed Columns2\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Landmark DocumentId",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "DocumentId",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "0734902b-630c-47d7-a175-715cc3cbc868",
+            "sourceColumn": "DocumentId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ClerkFileNumber",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "string",
+            "isHidden": true,
+            "lineageTag": "cce2c469-5f81-4f5f-af4c-a5835b5c92c2",
+            "sourceColumn": "ClerkFileNumber",
+            "summarizeBy": "none"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "59b0817e-13f2-4484-a1f1-8411d7d59e2d",
+        "partitions": [
+          {
+            "name": "Landmark DocumentId-5d7c692f-8297-4e0d-953d-0abe0194759e",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = AzureStorage.Blobs(Datalake),",
+                "    #\"v_foreclosure_detail_flat pq\" = Source{[#\"Folder Path\"=\"https://dldwprwestus3.blob.core.windows.net/datalake\",Name=\"consumer/foreclosure/landmark/documentid.pq\"]}[Content],",
+                "    #\"Imported Parquet\" = Parquet.Document(#\"v_foreclosure_detail_flat pq\"),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Imported Parquet\",{{\"DocumentId\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Foreclosure Links",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "PKId",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "lineageTag": "cb7cca36-1736-4fd7-b1f8-49f0ff2a3883",
+            "sourceColumn": "PKId",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PublicTDReception Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "lineageTag": "1e53e071-296f-4517-b38f-8d4a0577cfc1",
+            "sourceColumn": "PublicTDReception Link",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Restart1ElectionReception Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "lineageTag": "88e0f5b1-5e8b-43a2-a201-0bdf331286ec",
+            "sourceColumn": "Restart1ElectionReception Link",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "RerecordingNumber Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "lineageTag": "d89e1f7e-04db-407f-8d4a-5880b9a545c8",
+            "sourceColumn": "RerecordingNumber Link",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Deed_Of_Trust_Reception_No Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "lineageTag": "739e0b00-080a-49cb-bc17-04f74feb3fc9",
+            "sourceColumn": "Deed_Of_Trust_Reception_No Link",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Election_And_Demand_Reception_No Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "lineageTag": "7f1205e4-fc78-4b05-9c1f-f1a1d5b3c02d",
+            "sourceColumn": "Election_And_Demand_Reception_No Link",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Certificate_Of_Purchase_Reception_No Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "lineageTag": "bf6475ad-7af3-40d2-b767-941687bdd128",
+            "sourceColumn": "Certificate_Of_Purchase_Reception_No Link",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Withdrawal_Reception_No Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "lineageTag": "263ff7aa-a6e2-45c8-8f6c-4a5c7d744bbc",
+            "sourceColumn": "Withdrawal_Reception_No Link",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PT",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9cbda701-a170-42dd-9ab8-6bc2c2b65524",
+            "sourceColumn": "PT",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "County Parcel Number Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "WebUrl",
+            "dataType": "string",
+            "lineageTag": "15cc238d-3f0b-417d-82cf-2f140483251b",
+            "sourceColumn": "County Parcel Number Link",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "fa5ae99a-7e8f-4080-8666-4247d8589e3d",
+        "partitions": [
+          {
+            "name": "Foreclosure Links",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = AzureStorage.Blobs(Datalake),",
+                "    #\"v_foreclosure_detail_flat pq\" = Source{[#\"Folder Path\"=\"https://dldwprwestus3.blob.core.windows.net/datalake\",Name=\"consumer/foreclosure/v_foreclosure_detail_flat/v_foreclosure_detail_flat.pq\"]}[Content],",
+                "    #\"Imported Parquet\" = Parquet.Document(#\"v_foreclosure_detail_flat pq\"),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Imported Parquet\",{\"Edited\", \"DateFileReceived\", \"JuniorIntentFiled\", \"MaxSaleDate\", \"NOTSPublisher\", \"PropertyType\", \"PropertyTypeDescription\", \"PublicTDRecorded\", \"Restart1ElectionRecorded\", \"RerecordingDate\", \"OriginalElectionReRecorded\", \"Restart1ElectionReRecorded\", \"BKFiled\", \"Current_Owner\", \"Original_Borrower\", \"Beneficiary\", \"State_Parcel_Number\", \"Property_Address_Full\", \"Property_Address\", \"Property_City\", \"Property_Zip\", \"Subdivision\", \"Legal_Description\", \"Original_Note_Amount\", \"Outstanding_Balance_As_Of_FC_Filing\", \"Interest_Rate\", \"Attorney_For_Beneficiary\", \"Attorney_File_Number\", \"Attorney_Phone_Number\", \"Attorney_Address\", \"Foreclosure_Status\", \"OnHold\", \"Hold_Issue\", \"Combined_Notice_Mailed\", \"Cure_Intent_Due_By\", \"Cure_Intent_Filed\", \"Original_Scheduled_Sale_Date\", \"Current_Sale_Date\", \"Bid_From_the_Lender\", \"Notice_Of_Sale_Published\", \"Notice_Of_Sale_Publisher\", \"Continuances\", \"Date_Sold\", \"Purchaser\", \"Written_Bid_From_Lender\", \"BidTotalDue\", \"Accepted_Bid_Final_Sale_Amount\", \"Deficiency_Or_Overbid\", \"Intent_to_Redeem_Due_By\", \"Date_Closed\", \"Reason_Closed\", \"Withdrawal_Recorded\"}),",
+                "    #\"Split Column by Delimiter\" = Table.SplitColumn(#\"Removed Columns\", \"Deed_Of_Trust_Reception_No\", Splitter.SplitTextByEachDelimiter({\" \"}, QuoteStyle.Csv, false), {\"Deed_Of_Trust_Reception_No\"}),",
+                "    #\"Split Column by Delimiter1\" = Table.SplitColumn(#\"Split Column by Delimiter\", \"Election_And_Demand_Reception_No\", Splitter.SplitTextByEachDelimiter({\" \"}, QuoteStyle.Csv, false), {\"Election_And_Demand_Reception_No\"}),",
+                "    #\"Split Column by Delimiter2\" = Table.SplitColumn(#\"Split Column by Delimiter1\", \"Certificate_Of_Purchase_Reception_No\", Splitter.SplitTextByEachDelimiter({\" \"}, QuoteStyle.Csv, false), {\"Certificate_Of_Purchase_Reception_No\"}),",
+                "    #\"Replaced Value\" = Table.ReplaceValue(#\"Split Column by Delimiter2\",\"\",null,Replacer.ReplaceValue,{\"Deed_Of_Trust_Reception_No\"}),",
+                "    #\"Replaced Value3\" = Table.ReplaceValue(#\"Replaced Value\",\"*\",\"\",Replacer.ReplaceText,{\"Deed_Of_Trust_Reception_No\"}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Replaced Value3\", each true),",
+                "    #\"Replaced Value1\" = Table.ReplaceValue(#\"Filtered Rows\",\"\",null,Replacer.ReplaceValue,{\"Election_And_Demand_Reception_No\"}),",
+                "    #\"Replaced Value2\" = Table.ReplaceValue(#\"Replaced Value1\",\"\",null,Replacer.ReplaceValue,{\"Certificate_Of_Purchase_Reception_No\"}),",
+                "    #\"Inserted Merged Column\" = Table.AddColumn(#\"Replaced Value2\", \"Merged\", each Text.Combine({[PublicTDReception], [Restart1ElectionReception], [RerecordingNumber], [Deed_Of_Trust_Reception_No], [Election_And_Demand_Reception_No], [Certificate_Of_Purchase_Reception_No], [Withdrawal_Reception_No], [County_Parcel_Number]}, \"\"), type text),",
+                "    #\"Filtered Rows1\" = Table.SelectRows(#\"Inserted Merged Column\", each ([Merged] <> \"\")),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Filtered Rows1\",{\"Merged\"}),",
+                "    #\"Merged PublicTDReception\" = Table.NestedJoin(#\"Removed Columns1\", {\"PublicTDReception\"}, #\"Landmark DocumentId\", {\"ClerkFileNumber\"}, \"Landmark DocumentId\", JoinKind.LeftOuter),",
+                "    #\"PublicTDReception DocumentId\" = Table.ExpandTableColumn(#\"Merged PublicTDReception\", \"Landmark DocumentId\", {\"DocumentId\"}, {\"PublicTDReception DocumentId\"}),",
+                "    #\"Merged Restart1ElectionReception\" = Table.NestedJoin(#\"PublicTDReception DocumentId\", {\"Restart1ElectionReception\"}, #\"Landmark DocumentId\", {\"ClerkFileNumber\"}, \"Landmark DocumentId\", JoinKind.LeftOuter),",
+                "    #\"Restart1ElectionReception DocumentId\" = Table.ExpandTableColumn(#\"Merged Restart1ElectionReception\", \"Landmark DocumentId\", {\"DocumentId\"}, {\"Restart1ElectionReception DocumentId\"}),",
+                "    #\"Merged RerecordingNumber\" = Table.NestedJoin(#\"Restart1ElectionReception DocumentId\", {\"RerecordingNumber\"}, #\"Landmark DocumentId\", {\"ClerkFileNumber\"}, \"Landmark DocumentId\", JoinKind.LeftOuter),",
+                "    #\"RerecordingNumber DocumentId\" = Table.ExpandTableColumn(#\"Merged RerecordingNumber\", \"Landmark DocumentId\", {\"DocumentId\"}, {\"RerecordingNumber DocumentId\"}),",
+                "    #\"Merged Deed_Of_Trust_Reception_No\" = Table.NestedJoin(#\"RerecordingNumber DocumentId\", {\"Deed_Of_Trust_Reception_No\"}, #\"Landmark DocumentId\", {\"ClerkFileNumber\"}, \"Landmark DocumentId\", JoinKind.LeftOuter),",
+                "    #\"Deed_Of_Trust_Reception_No DocumentId\" = Table.ExpandTableColumn(#\"Merged Deed_Of_Trust_Reception_No\", \"Landmark DocumentId\", {\"DocumentId\"}, {\"Deed_Of_Trust_Reception_No DocumentId\"}),",
+                "    #\"Merged Election_And_Demand_Reception_No\" = Table.NestedJoin(#\"Deed_Of_Trust_Reception_No DocumentId\", {\"Election_And_Demand_Reception_No\"}, #\"Landmark DocumentId\", {\"ClerkFileNumber\"}, \"Landmark DocumentId\", JoinKind.LeftOuter),",
+                "    #\"Election_And_Demand_Reception_No DocumentId\" = Table.ExpandTableColumn(#\"Merged Election_And_Demand_Reception_No\", \"Landmark DocumentId\", {\"DocumentId\"}, {\"Election_And_Demand_Reception_No DocumentId\"}),",
+                "    #\"Merged Certificate_Of_Purchase_Reception_No\" = Table.NestedJoin(#\"Election_And_Demand_Reception_No DocumentId\", {\"Certificate_Of_Purchase_Reception_No\"}, #\"Landmark DocumentId\", {\"ClerkFileNumber\"}, \"Landmark DocumentId\", JoinKind.LeftOuter),",
+                "    #\"Certificate_Of_Purchase_Reception_No DocumentId\" = Table.ExpandTableColumn(#\"Merged Certificate_Of_Purchase_Reception_No\", \"Landmark DocumentId\", {\"DocumentId\"}, {\"Certificate_Of_Purchase_Reception_No DocumentId\"}),",
+                "    #\"Merged Withdrawal_Reception_No\" = Table.NestedJoin(#\"Certificate_Of_Purchase_Reception_No DocumentId\", {\"Withdrawal_Reception_No\"}, #\"Landmark DocumentId\", {\"ClerkFileNumber\"}, \"Landmark DocumentId\", JoinKind.LeftOuter),",
+                "    #\"Withdrawal_Reception_No DocumentId\" = Table.ExpandTableColumn(#\"Merged Withdrawal_Reception_No\", \"Landmark DocumentId\", {\"DocumentId\"}, {\"Withdrawal_Reception_No DocumentId\"}),",
+                "    #\"Removed Columns2\" = Table.RemoveColumns(#\"Withdrawal_Reception_No DocumentId\",{\"PublicTDReception\", \"Restart1ElectionReception\", \"RerecordingNumber\", \"Deed_Of_Trust_Reception_No\", \"Election_And_Demand_Reception_No\", \"Certificate_Of_Purchase_Reception_No\", \"Withdrawal_Reception_No\"}),",
+                "    #\"Added PublicTDReception\" = Table.AddColumn(#\"Removed Columns2\", \"PublicTDReception Link\", each if [PublicTDReception DocumentId] is null then null else Text.Combine({\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\",[PublicTDReception DocumentId]})),",
+                "",
+                "    #\"Added Restart1ElectionReception\" = Table.AddColumn(#\"Added PublicTDReception\", \"Restart1ElectionReception Link\", each if [Restart1ElectionReception DocumentId] is null then null else Text.Combine({\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\",[Restart1ElectionReception DocumentId]})),",
+                "    #\"Added RerecordingNumber\" = Table.AddColumn(#\"Added Restart1ElectionReception\", \"RerecordingNumber Link\", each if [RerecordingNumber DocumentId] is null then null else Text.Combine({\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\",[RerecordingNumber DocumentId]})),",
+                "    #\"Added Deed_Of_Trust_Reception_No\" = Table.AddColumn(#\"Added RerecordingNumber\", \"Deed_Of_Trust_Reception_No Link\", each if [Deed_Of_Trust_Reception_No DocumentId] is null then null else Text.Combine({\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\",[Deed_Of_Trust_Reception_No DocumentId]})),",
+                "    #\"Added Election_And_Demand_Reception_No\" = Table.AddColumn(#\"Added Deed_Of_Trust_Reception_No\", \"Election_And_Demand_Reception_No Link\", each if [Election_And_Demand_Reception_No DocumentId] is null then null else Text.Combine({\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\",[Election_And_Demand_Reception_No DocumentId]})),",
+                "    #\"Added Certificate_Of_Purchase_Reception_No\" = Table.AddColumn(#\"Added Election_And_Demand_Reception_No\", \"Certificate_Of_Purchase_Reception_No Link\", each if [Certificate_Of_Purchase_Reception_No DocumentId] is null then null else Text.Combine({\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\",[Certificate_Of_Purchase_Reception_No DocumentId]})),",
+                "    #\"Added Withdrawal_Reception_No\" = Table.AddColumn(#\"Added Certificate_Of_Purchase_Reception_No\", \"Withdrawal_Reception_No Link\", each if [Withdrawal_Reception_No DocumentId] is null then null else Text.Combine({\"https://apps.douglas.co.us/LandMarkWeb/search/DocumentByDocumentID?documentid=\",[Withdrawal_Reception_No DocumentId]})),",
+                "    #\"Added County Parcel Number Link\" = Table.AddColumn(#\"Added Withdrawal_Reception_No\", \"County Parcel Number Link\", each if [County_Parcel_Number] is null then null else \"https://apps.douglas.co.us/assessor/web/#/details/\" & [County_Parcel_Number]),",
+                "    #\"Removed Columns3\" = Table.RemoveColumns(#\"Added County Parcel Number Link\",{\"PublicTDReception DocumentId\", \"Restart1ElectionReception DocumentId\", \"RerecordingNumber DocumentId\", \"Deed_Of_Trust_Reception_No DocumentId\", \"Election_And_Demand_Reception_No DocumentId\", \"Certificate_Of_Purchase_Reception_No DocumentId\", \"Withdrawal_Reception_No DocumentId\", \"County_Parcel_Number\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Columns3\",{{\"PT_NO\", \"PT\"}})",
+                "in",
+                "    #\"Renamed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

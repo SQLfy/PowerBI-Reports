@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Foreclosure Search Dataset"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "79d0d25d-583e-46ea-a385-ca06c9f94c65"
+  }
+}

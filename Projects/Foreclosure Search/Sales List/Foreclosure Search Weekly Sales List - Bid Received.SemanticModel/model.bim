@@ -1,0 +1,443 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.131.901.0 (24.07)"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"SQLServer\",\"SQLDatabase\",\"v_WeeklySaleList\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "dataSourceDefaultMaxConnections": 20,
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "SQLServer",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "expression": "\"PRMDS-SQL1.dcgov.douglas.co.us\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "dc6e3291-65ac-4f73-bd3a-b8e4490c7eab"
+      },
+      {
+        "name": "SQLDatabase",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Text"
+          }
+        ],
+        "expression": "\"MDSCO_PT\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "kind": "m",
+        "lineageTag": "8fbec574-d4e2-4c16-8abb-832ebcd666ba"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "v_WeeklySaleList",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "IsHidden"
+          }
+        ],
+        "columns": [
+          {
+            "name": "PKId",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "IsHidden"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isNullable": false,
+            "lineageTag": "6e08eb40-dd12-4276-a9b8-a04c26302daf",
+            "sourceColumn": "PKId",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PT #",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "Name"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "09e85917-2dc8-483a-912c-20878091a63b",
+            "sourceColumn": "PT_NO",
+            "sourceProviderType": "varchar(15)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Address",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "Name"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2e7eaa03-1e35-4738-b035-ae3b5a39fe56",
+            "sourceColumn": "Property_Address",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "City",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "Name"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c4a1e58c-5d40-49f5-9a8a-72153f25047d",
+            "sourceColumn": "Property_City",
+            "sourceProviderType": "varchar(30)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Original Note Amount",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "FormatString"
+              },
+              {
+                "property": "Name"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "937c1d74-6e55-4cb7-be71-cd58ad965099",
+            "sourceColumn": "Original_Note_Amount",
+            "sourceProviderType": "money",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Current Sale Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "Name"
+              },
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "mm/dd/yyyy",
+            "lineageTag": "6f19633c-6676-492d-8a67-5f9d6cdaecab",
+            "sourceColumn": "Current_Sale_Date",
+            "sourceProviderType": "date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "Name"
+              }
+            ],
+            "dataType": "string",
+            "isNullable": false,
+            "lineageTag": "2bb149cf-42ba-484e-aa90-b45a46742205",
+            "sourceColumn": "Foreclosure_Status",
+            "sourceProviderType": "varchar(7)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Hold Issue",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "Name"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3056d832-31b7-44eb-bbe6-c9f4ff57969b",
+            "sourceColumn": "Hold_Issue",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bid Received",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "Name"
+              },
+              {
+                "property": "DataType"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "isNullable": false,
+            "lineageTag": "022e0eb5-87d5-48ed-82f0-627584d5f89d",
+            "sourceColumn": "Bid_Received",
+            "sourceProviderType": "varchar(3)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Bid From Lender",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"currencyCulture\":\"en-US\"}"
+              }
+            ],
+            "changedProperties": [
+              {
+                "property": "Name"
+              },
+              {
+                "property": "FormatString"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.00;(\\$#,0.00);\\$#,0.00",
+            "lineageTag": "8648bb00-a422-4f41-8428-46fcb7f614ab",
+            "sourceColumn": "Bid_From_the_Lender",
+            "sourceProviderType": "money",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "PT_Link",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "e692d005-6b09-48c8-a3c2-935073827353",
+            "sourceColumn": "PT_Link",
+            "sourceProviderType": "varchar(77)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "DateNow",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isNullable": false,
+            "lineageTag": "32b6feea-4ce5-4602-a823-bb35616cbb41",
+            "sourceColumn": "DateNow",
+            "sourceProviderType": "datetime",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "BidTotalDue",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "d0b94c31-4e32-4ac2-8669-2bf8daf8d3ba",
+            "sourceColumn": "BidTotalDue",
+            "sourceProviderType": "money",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Deficiency_Or_Overbid",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataType": "double",
+            "formatString": "\\$#,0.###############;(\\$#,0.###############);\\$#,0.###############",
+            "lineageTag": "d0fdd0d0-87f9-46c4-afe4-3f26d995eb03",
+            "sourceColumn": "Deficiency_Or_Overbid",
+            "sourceProviderType": "money",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Grantor",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "7834441a-401e-4604-b277-9c6a1170de47",
+            "sourceColumn": "Grantor",
+            "sourceProviderType": "varchar(8000)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Beneficiary",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "00aa045a-86e1-4456-b6da-163f677fca20",
+            "sourceColumn": "Beneficiary",
+            "sourceProviderType": "varchar(max)",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "eae2532c-a182-492f-be67-825a4c5ff100",
+        "measures": [
+          {
+            "name": "Date and Time Data was Last Refreshed",
+            "expression": "MAX(v_WeeklySaleList[DateNow]) ",
+            "formatString": "General Date",
+            "lineageTag": "33341730-89a4-413a-aee2-6ebaa6b7cd52"
+          },
+          {
+            "name": "Search Link",
+            "dataCategory": "WebUrl",
+            "expression": "\"https://pubreports.douglas.co.us/Home/Index/ForeclosureSearch\"",
+            "lineageTag": "eb46ca26-4fca-486d-af2e-4345b057b6e6"
+          },
+          {
+            "name": "PT Count",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    Count('v_WeeklySaleList'[PKId]) + 0",
+              "    ,Filter('v_WeeklySaleList', 'v_WeeklySaleList'[PKId] <> 0)",
+              ")"
+            ],
+            "formatString": "0",
+            "lineageTag": "261ce463-0665-4924-b5f6-67c733d8ffe6"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "v_WeeklySaleList-9ee88af4-045d-4fb2-b664-b8c7d55c4780",
+            "mode": "directQuery",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Sql.Database(SQLServer, SQLDatabase, [Query=\"#(lf)select --top 5#(lf)#(lf)#(tab)#(tab)--tblFil#(lf)#(tab)#(tab)#(tab) tf.PKId#(lf)#(tab)#(tab)#(tab),PT_NO = tf.FileNumber#(lf)#(tab)#(tab)#(tab),Property_Address = LTRIM(RTRIM(ISNULL(REPLACE(REPLACE(REPLACE(tfta.Address1,CHAR(13),' '),CHAR(10),' '),CHAR(9),' '),''))) + CASE WHEN tfta.Address1 IS NULL THEN '' ELSE ' ' END#(lf)#(tab)#(tab)#(tab),Property_City = LTRIM(RTRIM(ISNULL(tfta.City,'')))#(lf)#(tab)#(tab)#(tab),Original_Note_Amount = tf.OriginalNoteAmount#(lf)#(tab)#(tab)#(tab),Current_Sale_Date = CONVERT(date,tf.SaleDateCurrent,101)#(lf)#(tab)#(tab)#(tab),Foreclosure_Status = 'PreSale'#(lf)#(tab) #(tab)#(tab),Hold_Issue = CASE WHEN tf.OnHold <> 0 THEN dbo.udf_Hold_Issue(tf.PKId) ELSE '' END#(lf)#(tab)#(tab)#(tab),Bid_Received = 'Yes' #(lf)#(tab)#(tab)#(tab),Bid_From_the_Lender = tf.BidOpen#(lf)#(tab)#(tab)#(tab),PT_Link = 'https://pubreports.douglas.co.us/Home/Index/ForeclosureDetail/' +  tf.FileNumber#(lf)#(tab)#(tab)#(tab),DateNow = GETDATE()#(lf)#(tab)#(tab)#(tab),BidTotalDue = convert(money,tf.BidTotalDue)#(lf)#(tab)#(tab)#(tab),Deficiency_Or_Overbid = convert(money,REPLACE(CONVERT(varchar(30),tf.BidOverDeficiency,1),',',''))#(lf)#(tab)#(tab)#(tab),Grantor = REPLACE(REPLACE(REPLACE(tf.TrustorOriginal,CHAR(13),' '),CHAR(10),' '),CHAR(9),' ')#(lf)#(tab)#(tab)#(tab),Beneficiary = REPLACE(REPLACE(REPLACE(CAST(tb.LegalName AS varchar(MAX)),CHAR(13),' '),CHAR(10),' '),CHAR(9),' ')#(lf)#(lf)#(tab)FROM #(lf)#(tab)#(tab)dbo.tblFile AS tf with (nolock)#(lf)#(tab)#(tab)LEFT JOIN dbo.tblFile_Junction#(tab)#(tab)AS tfj1 WITH (NOLOCK) ON tf.PKId = tfj1.FileID AND tfj1.TableName = 'tblBeneficiary' AND tfj1.JunctionType = 'Current' #(lf)#(tab)#(tab)LEFT JOIN dbo.tblFile_TrustorAddress#(tab)AS tfta WITH (NOLOCK) ON tf.PKId = tfta.FileID AND tfta.TrustorType = 'Location' #(lf)#(tab)#(tab)LEFT JOIN dbo.tblBeneficiary#(tab)#(tab)#(tab)AS tb#(tab)WITH (NOLOCK) ON tfj1.DetailID = tb.PKId #(lf)#(tab)WHERE#(lf)#(tab)#(tab)isnull(tf.BidOpen,'') <> '' #(lf)#(tab)#(tab)and isnull(tf.[Status],'') = 'PreSale'#(lf)#(tab)UNION#(lf)#(tab)#(tab)select top 1#(lf)#(tab)#(tab)#(tab) PKId = null#(lf)#(tab)#(tab)#(tab),PT_NO = ''#(lf)#(tab)#(tab)#(tab),Property_Address = 'No Properties listed currently in weekly sales list.'#(lf)#(tab)#(tab)#(tab),Property_City = ''#(lf)#(tab)#(tab)#(tab),Original_Note_Amount = null#(lf)#(tab)#(tab)#(tab),Current_Sale_Date = null#(lf)#(tab)#(tab)#(tab),Foreclosure_Status = ''#(lf)#(tab) #(tab)#(tab),Hold_Issue = '' #(lf)#(tab)#(tab)#(tab),Bid_Received = '' #(lf)#(tab)#(tab)#(tab),Bid_From_the_Lender = null#(lf)#(tab)#(tab)#(tab),PT_Link = ''#(lf)#(tab)#(tab)#(tab),DateNow = GETDATE()#(lf)#(tab)#(tab)#(tab),BidTotalDue = null#(lf)#(tab)#(tab)#(tab),Deficiency_Or_Overbid = null#(lf)#(tab)#(tab)#(tab),Grantor = ''#(lf)#(tab)#(tab)#(tab),Beneficiary = ''#(lf)#(tab)WHERE#(lf)#(tab)#(tab)0 =#(tab)(#(tab)select count(*) #(lf)#(tab)#(tab)#(tab)#(tab)FROM #(lf)#(tab)#(tab)#(tab)#(tab)#(tab)dbo.tblFile AS tf with (nolock)#(lf)#(tab)#(tab)#(tab)#(tab)#(tab)LEFT JOIN dbo.tblFile_Junction#(tab)#(tab)AS tfj1 WITH (NOLOCK) ON tf.PKId = tfj1.FileID AND tfj1.TableName = 'tblBeneficiary' AND tfj1.JunctionType = 'Current' #(lf)#(tab)#(tab)#(tab)#(tab)#(tab)LEFT JOIN dbo.tblFile_TrustorAddress#(tab)AS tfta WITH (NOLOCK) ON tf.PKId = tfta.FileID AND tfta.TrustorType = 'Location' #(lf)#(tab)#(tab)#(tab)#(tab)WHERE#(lf)#(tab)#(tab)#(tab)#(tab)#(tab)isnull(tf.BidOpen,'') <> '' #(lf)#(tab)#(tab)#(tab)#(tab)#(tab)and isnull(tf.[Status],'') = 'PreSale'#(lf)#(tab)#(tab)#(tab))#(lf)\", CreateNavigationProperties=false])",
+                "in",
+                "    Source"
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

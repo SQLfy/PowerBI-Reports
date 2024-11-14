@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Foreclosure Search Weekly Sales List - Bid Received"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "90da387a-d574-41c5-8e9e-2b62a8b58c7d"
+  }
+}
