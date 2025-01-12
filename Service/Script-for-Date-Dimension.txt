@@ -6,6 +6,7 @@ let
     StartofFiscalYear=7, // set the month number that is start of the financial year. example; if fiscal year start is July, value is 7
     firstDayofWeek=Day.Monday, // set the week's start day, values: Day.Monday, Day.Sunday....
     // configuration end
+    //https://radacad.com/all-in-one-script-to-create-date-dimension-in-power-bi-using-power-query
     FromDate=#date(FromYear,1,1),
     ToDate=#date(ToYear,12,31),
     Source=List.Dates(
